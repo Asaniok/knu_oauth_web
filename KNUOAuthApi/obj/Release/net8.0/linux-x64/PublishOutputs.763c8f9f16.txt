@@ -1,0 +1,5 @@
+S:\KNU\Диплом\KNUOAuthApi\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.Development.json
+S:\KNU\Диплом\KNUOAuthApi\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.json
+S:\KNU\Диплом\KNUOAuthApi\obj\Release\net8.0\linux-x64\PubTmp\Out\KNUOAuthApi.pdb
+S:\KNU\Диплом\KNUOAuthApi\obj\Release\net8.0\linux-x64\PubTmp\Out\KNUAuthMYSQLConnector.pdb
+S:\KNU\Диплом\KNUOAuthApi\obj\Release\net8.0\linux-x64\PubTmp\Out\KNUOAuthApi

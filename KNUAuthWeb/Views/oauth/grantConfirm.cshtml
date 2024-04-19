@@ -1,0 +1,15 @@
+﻿@model KNUAuthWeb.Models.User
+
+@{
+    ViewBag.Title = "Grant Confirm";
+}
+
+<h2>Grant Confirm</h2>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div>Дозвіл на: @TempData["scope"]</div>
+    <br>
+
+    <button type="submit">Авторизувати</button>
+}

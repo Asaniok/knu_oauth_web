@@ -1,0 +1,5 @@
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Release\net8.0\KNUAuthMYSQLConnector.csproj.AssemblyReference.cache
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Release\net8.0\KNUAuthMYSQLConnector.GeneratedMSBuildEditorConfig.editorconfig
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Release\net8.0\KNUAuthMYSQLConnector.AssemblyInfoInputs.cache
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Release\net8.0\KNUAuthMYSQLConnector.AssemblyInfo.cs
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Release\net8.0\KNUAuthMYSQLConnector.csproj.CoreCompileInputs.cache

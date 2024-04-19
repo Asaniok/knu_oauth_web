@@ -1,0 +1,6 @@
+@KNUOAuthApi_HostAddress = http://localhost:5171
+
+GET {{KNUOAuthApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

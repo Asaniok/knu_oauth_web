@@ -1,0 +1,50 @@
+CREATE TABLE `users` (
+	`id` INT UNSIGNED KEY NOT NULL AUTO_INCREMENT,
+	`user` CHAR(50) NOT NULL,
+	`email` TEXT NULL DEFAULT NULL,
+	`password` TEXT NOT NULL
+)
+COLLATE='utf8mb4_general_ci'
+;
+
+CREATE TABLE `tokens` (
+	`token` CHAR(128) NOT NULL,
+	`exptime` INT NOT NULL DEFAULT 86400,
+	`refresh_token`  CHAR(128) NULL DEFAULT NULL,
+	`type` TEXT NOT NULL,
+	`scope` TEXT NULL DEFAULT NULL,
+	`user` INT NOT NULL, 
+	`created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+COLLATE='utf8mb4_general_ci'
+;
+
+CREATE TABLE `clients` (
+	`id` INT UNSIGNED KEY NOT NULL AUTO_INCREMENT,
+	`name` CHAR(50) NOT NULL,
+	`email` TEXT NULL DEFAULT NULL,
+	`desc` TEXT NULL DEFAULT NULL
+)
+COLLATE='utf8mb4_general_ci'
+;
+
+CREATE TABLE `codes` (
+	`code` CHAR(16) NOT NULL,
+	`exptime` INT NOT NULL DEFAULT 86400,
+	`scope` TEXT NOT NULL,
+	`client_id` INT NOT NULL, 
+	`user_id` INT NOT NULL,
+	`created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+COLLATE='utf8mb4_general_ci'
+;
+
+CREATE TABLE `codeStep` (
+	`user_id` CHAR(16) NOT NULL,
+	`client_id` INT NOT NULL DEFAULT 86400,
+	`check_code` INT NOT NULL,
+	`state` INT NOT NULL,
+	`created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+COLLATE='utf8mb4_general_ci'
+;

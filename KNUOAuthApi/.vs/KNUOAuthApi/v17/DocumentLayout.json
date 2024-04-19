@@ -1,0 +1,132 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuoauthapi\\controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|solutionrelative:controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuoauthapi\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|solutionrelative:token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuoauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuoauthapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuoauthapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuoauthapi\\knuoauthapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{4BE134B9-31B4-4B34-B07E-C94F9283E89B}|KNUOAuthApi.csproj|solutionrelative:knuoauthapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MySQL.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
+              "RelativeDocumentMoniker": "..\\KNUAuthMYSQLConnector\\MySQL.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
+              "RelativeToolTip": "..\\KNUAuthMYSQLConnector\\MySQL.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAowCQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T15:19:39.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Token.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Token.cs",
+              "RelativeDocumentMoniker": "Token.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Token.cs",
+              "RelativeToolTip": "Token.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T13:05:04.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "token.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Controllers\\token.cs",
+              "RelativeDocumentMoniker": "Controllers\\token.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Controllers\\token.cs",
+              "RelativeToolTip": "Controllers\\token.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwE0AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T09:40:15.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T09:40:15.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T09:40:15.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T09:40:15.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KNUOAuthApi.http",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\KNUOAuthApi.http",
+              "RelativeDocumentMoniker": "KNUOAuthApi.http",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUOAuthApi\\KNUOAuthApi.http",
+              "RelativeToolTip": "KNUOAuthApi.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-04-10T09:40:15.466Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
