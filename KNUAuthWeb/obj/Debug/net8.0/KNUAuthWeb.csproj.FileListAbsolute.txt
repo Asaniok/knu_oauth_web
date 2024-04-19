@@ -14,8 +14,6 @@ S:\KNU\Диплом\KNUAuthWeb\bin\Debug\net8.0\KNUAuthWeb.deps.json
 S:\KNU\Диплом\KNUAuthWeb\bin\Debug\net8.0\KNUAuthWeb.runtimeconfig.json
 S:\KNU\Диплом\KNUAuthWeb\bin\Debug\net8.0\KNUAuthWeb.dll
 S:\KNU\Диплом\KNUAuthWeb\bin\Debug\net8.0\KNUAuthWeb.pdb
-S:\KNU\Диплом\KNUAuthWeb\bin\Debug\net8.0\KNUAuthMYSQLConnector.dll
-S:\KNU\Диплом\KNUAuthWeb\bin\Debug\net8.0\KNUAuthMYSQLConnector.pdb
 S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\staticwebassets.build.json
 S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\staticwebassets.development.json
 S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\staticwebassets\msbuild.KNUAuthWeb.Microsoft.AspNetCore.StaticWebAssets.props

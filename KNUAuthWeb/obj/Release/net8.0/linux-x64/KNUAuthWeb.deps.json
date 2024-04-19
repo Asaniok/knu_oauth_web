@@ -11,8 +11,7 @@
         "dependencies": {
           "Microsoft.NET.ILLink.Tasks": "8.0.3",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.6",
-          "MySql.Data": "8.3.0",
-          "KNUAuthMYSQLConnector": "1.0.0.0"
+          "MySql.Data": "8.3.0"
         },
         "runtime": {
           "KNUAuthWeb.dll": {}
@@ -269,14 +268,6 @@
           "lib/net7.0/ZstdSharp.dll": {
             "assemblyVersion": "0.7.1.0",
             "fileVersion": "0.7.1.0"
-          }
-        }
-      },
-      "KNUAuthMYSQLConnector/1.0.0.0": {
-        "runtime": {
-          "KNUAuthMYSQLConnector.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -588,11 +579,6 @@
       "sha512": "sha512-Idgg+mJEyAujqDPzA3APy9dNoyw0YQcNA65GgYjktDRtJ+nvx/hv+J+m6Eax3JJMGEYGy04oc5YNP6ZvQ3Y1vQ==",
       "path": "zstdsharp.port/0.7.1",
       "hashPath": "zstdsharp.port.0.7.1.nupkg.sha512"
-    },
-    "KNUAuthMYSQLConnector/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

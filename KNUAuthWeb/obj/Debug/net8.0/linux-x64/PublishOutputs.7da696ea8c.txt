@@ -1,0 +1,4 @@
+S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\linux-x64\PubTmp\Out\appsettings.Development.json
+S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\linux-x64\PubTmp\Out\appsettings.json
+S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\linux-x64\PubTmp\Out\KNUAuthWeb.pdb
+S:\KNU\Диплом\KNUAuthWeb\obj\Debug\net8.0\linux-x64\PubTmp\Out\KNUAuthWeb

@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>S:\WebAPI</_PublishTargetUrl>
-    <History>True|2024-04-19T12:48:03.3968114Z;True|2024-04-18T20:25:55.4996391+03:00;True|2024-04-18T19:56:18.5668336+03:00;</History>
+    <_PublishTargetUrl>S:\KNU\Диплом\Deploy</_PublishTargetUrl>
+    <History>True|2024-04-19T14:24:37.0918902Z;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

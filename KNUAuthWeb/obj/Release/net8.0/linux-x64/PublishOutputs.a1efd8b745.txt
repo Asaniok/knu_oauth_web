@@ -1,5 +1,4 @@
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.Development.json
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.json
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\PubTmp\Out\KNUAuthWeb.pdb
-S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\PubTmp\Out\KNUAuthMYSQLConnector.pdb
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\PubTmp\Out\KNUAuthWeb

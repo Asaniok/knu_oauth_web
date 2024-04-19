@@ -54,9 +54,15 @@ namespace KNUAuthWeb.Controllers
         [HttpGet]
         public IActionResult login()
         {
-            if(TempData["login.text"] == null)
+            string scope = HttpContext.Request.Query["scope"];
+            if (TempData["login.text"] == null)
             {
                 TempData["login.text"] = "Увійти";
+            }
+            if(scope!=null)
+            {
+                TempData["scope"] = scope;
+                TempData["login.text"] = "Авторизувати";
             }
             return View();
         }
@@ -112,7 +118,7 @@ namespace KNUAuthWeb.Controllers
             bool check = MySQL.checkClient(connector, cID);
             if (!check) { return RedirectToAction("Home"); }
             TempData["scope"] = scope;
-            TempData["login.text"] = "Увійти та надати доступ";
+            TempData["login.text"] = "Авторизувати";
             return RedirectToAction("login", new { client_id = cID, responseUrl=rUrl, state = state, scope=scope});
         }
     }

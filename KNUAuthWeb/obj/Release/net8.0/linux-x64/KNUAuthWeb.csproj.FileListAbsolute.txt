@@ -19,8 +19,6 @@ S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\linux-x64\System.Security.Cryp
 S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\linux-x64\System.Security.Permissions.dll
 S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\linux-x64\System.Windows.Extensions.dll
 S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\linux-x64\ZstdSharp.dll
-S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\linux-x64\KNUAuthMYSQLConnector.dll
-S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\linux-x64\KNUAuthMYSQLConnector.pdb
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\KNUAuthWeb.csproj.AssemblyReference.cache
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\KNUAuthWeb.GeneratedMSBuildEditorConfig.editorconfig
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\linux-x64\KNUAuthWeb.AssemblyInfoInputs.cache

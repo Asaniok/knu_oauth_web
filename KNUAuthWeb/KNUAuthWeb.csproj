@@ -13,10 +13,4 @@
     <PackageReference Include="MySql.Data" Version="8.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="KNUAuthMYSQLConnector">
-      <HintPath>..\KNUAuthMYSQLConnector\bin\Debug\net8.0\KNUAuthMYSQLConnector.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

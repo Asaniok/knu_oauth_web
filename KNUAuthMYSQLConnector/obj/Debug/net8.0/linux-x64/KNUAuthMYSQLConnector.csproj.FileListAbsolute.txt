@@ -1,0 +1,12 @@
+S:\KNU\Диплом\KNUAuthMYSQLConnector\bin\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.deps.json
+S:\KNU\Диплом\KNUAuthMYSQLConnector\bin\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.dll
+S:\KNU\Диплом\KNUAuthMYSQLConnector\bin\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.pdb
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.csproj.AssemblyReference.cache
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.GeneratedMSBuildEditorConfig.editorconfig
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.AssemblyInfoInputs.cache
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.AssemblyInfo.cs
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.csproj.CoreCompileInputs.cache
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.dll
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\refint\KNUAuthMYSQLConnector.dll
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\KNUAuthMYSQLConnector.pdb
+S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\linux-x64\ref\KNUAuthMYSQLConnector.dll
