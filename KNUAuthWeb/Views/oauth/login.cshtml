@@ -35,7 +35,6 @@
             </div>
             <div>
                 @Html.PasswordFor(m => m.Password)
-                @Html.ValidationMessageFor(m => m.Password)
             </div>
         </tr>
     </table>
@@ -51,7 +50,7 @@
     <br>
     <br>
     <br>
-    @ViewData["Error"]
+    @TempData["Error"]
 }else{
 
 }

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace KNUAuthMYSQLConnector
 {
@@ -200,5 +201,92 @@ namespace KNUAuthMYSQLConnector
             else { return false; }
             return true;
         }
+        public static string getActualToken(Connector c, int user_id)
+        {
+            if (c == null) { return "IE01"; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT token FROM tokens  WHERE (UNIX_TIMESTAMP(CURRENT_TIMESTAMP)-(UNIX_TIMESTAMP(created_at))<exptime) AND user={user_id};";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string token = reader["token"].ToString();
+                conn.CloseAsync();
+                if (token == null) { return "KAS_ERROR_NULL_TOKEN"; }
+                else {return token; }
+            }
+            return "IE01";
+        }
+        public static int getUserIdByCode(Connector c, string code)
+        {
+            if (c == null) { return 0; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT user_id FROM codes WHERE `code`='{code}';";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                int user_id = int.Parse(reader["user_id"].ToString());
+                conn.CloseAsync();
+                if (user_id==0) { return 0; }
+                else { return user_id; }
+            }
+            return 0;
+        }
+        public static string getUserNameByToken(Connector c, string token)
+        {
+            if (c == null) { return "IE01"; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT U.`user` FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string username = reader["user"].ToString();
+                conn.CloseAsync();
+                if (username == null) { return "IE01"; }
+                else { return username; }
+            }
+            return "IE01";
+        }
+        public static dbUser getUserByToken(Connector c, string token)
+        {
+            if (c == null) { return null; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT U.`user`,U.id,U.email FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string username = "", email = "";int id = 0; dbUser user = null;
+                try
+                {
+                    username = reader["user"].ToString();
+                    id = int.Parse(reader["id"].ToString());
+                    email = reader["email"].ToString();
+                    user=new dbUser
+                    {
+                        id = id,
+                        email = email,
+                        user = username
+                    };
+                    return user;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
+
     }
 }

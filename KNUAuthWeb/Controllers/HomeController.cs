@@ -1,3 +1,4 @@
+using KNUAuthMYSQLConnector;
 using KNUAuthWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -12,9 +13,31 @@ namespace KNUAuthWeb.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
+            Connector connector = new Connector();
+            connector.database = "test";
+            connector.port = 3306;
+            connector.user = "root";
+            connector.password = "Qw123456";
+            connector.server = "localhost";
+            try
+            {
+                Response.Cookies.Delete("client_id");
+                Response.Cookies.Delete("responseUrl");
+                Response.Cookies.Delete("state");
+                Response.Cookies.Delete("scope");
+            }
+            catch { }
+            try { 
+                string token = Request.Cookies["user_token"];
+                string username = MySQL.getUserNameByToken(connector, token);
+                if (username!="IE01") { 
+                    @TempData["Username"] = username;
+                    @TempData["action"] = "viewProfile";
+                }  } catch { }
+            
             return View();
         }
 

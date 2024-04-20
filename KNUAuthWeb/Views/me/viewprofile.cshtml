@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "View Profile";
+}
+
+<div class="text-center">
+    @if (TempData["id"] == null)
+    {
+            <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="login">[ Авторизуватись ]</a>
+    }
+    else
+    {
+        <h1 class="display-4">Welcome</h1>
+        <h3>Username: </h3>
+
+        <h2>@TempData["name"]</h2>
+        <h3>You unique ID:</h3>
+
+        <h2>@TempData["id"]</h2>
+        <h3>Email: </h3>
+
+        <h2>@TempData["email"]</h2>
+        <form method="post" action="@Url.Action("login", "oauth")">
+            <button type="submit">Вийти</button>
+        </form>
+    }
+</div>

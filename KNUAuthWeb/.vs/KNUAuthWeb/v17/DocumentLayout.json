@@ -3,68 +3,72 @@
   "WorkspaceRootPath": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\oauthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\oauthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\mecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\mecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\me\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\me\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\MySQL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MySQL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Properties\\PublishProfiles\\FolderProfile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Properties\\PublishProfiles\\FolderProfile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Models\\signInModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\signInModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\OK.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\oauth\\OK.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\ok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\ok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\models\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\properties\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:properties\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,24 +78,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MySQL.cs",
-              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\MySQL.cs",
-              "RelativeDocumentMoniker": "MySQL.cs",
-              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\MySQL.cs",
-              "RelativeToolTip": "MySQL.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAqwHkAAAA8AAAA",
+              "DocumentIndex": 0,
+              "Title": "meController.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs",
+              "RelativeDocumentMoniker": "Controllers\\meController.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs",
+              "RelativeToolTip": "Controllers\\meController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwDEAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:39:47.837Z",
+              "WhenOpened": "2024-04-20T21:04:48.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "viewprofile.cshtml",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\me\\viewprofile.cshtml",
+              "RelativeDocumentMoniker": "Views\\me\\viewprofile.cshtml",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\me\\viewprofile.cshtml",
+              "RelativeToolTip": "Views\\me\\viewprofile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-20T21:00:50.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Token.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Token.cs",
               "RelativeDocumentMoniker": "Token.cs",
@@ -99,25 +116,24 @@
               "RelativeToolTip": "Token.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T10:36:44.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T10:36:44.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "token.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\token.cs",
               "RelativeDocumentMoniker": "Controllers\\token.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\token.cs",
               "RelativeToolTip": "Controllers\\token.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAArAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA1wCwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T18:36:40.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "FolderProfile.pubxml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Properties\\PublishProfiles\\FolderProfile.pubxml",
               "RelativeDocumentMoniker": "Properties\\PublishProfiles\\FolderProfile.pubxml",
@@ -125,12 +141,11 @@
               "RelativeToolTip": "Properties\\PublishProfiles\\FolderProfile.pubxml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-04-18T17:21:07.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T17:21:07.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -138,25 +153,24 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-18T17:19:16.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T17:19:16.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAACCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-18T13:27:20.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "OK.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\OK.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\OK.cshtml",
@@ -169,20 +183,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T10:28:13.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -195,59 +209,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "oauthController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeDocumentMoniker": "Controllers\\oauthController.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeToolTip": "Controllers\\oauthController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwDgAAAA+AAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAgwHAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T09:27:15.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "signInModel.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Models\\signInModel.cs",
               "RelativeDocumentMoniker": "Models\\signInModel.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Models\\signInModel.cs",
               "RelativeToolTip": "Models\\signInModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T09:26:03.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T09:26:03.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-18T13:26:06.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "login.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\login.cshtml",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
               "RelativeToolTip": "Views\\oauth\\login.cshtml",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAUwDcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-18T11:25:22.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -255,12 +268,11 @@
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T09:34:57.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T09:34:57.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "register.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\register.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\register.cshtml",
@@ -268,12 +280,11 @@
               "RelativeToolTip": "Views\\oauth\\register.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T09:25:07.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T09:25:07.074Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "grantConfirm.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\grantConfirm.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\grantConfirm.cshtml",
@@ -281,8 +292,7 @@
               "RelativeToolTip": "Views\\oauth\\grantConfirm.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T18:32:55.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T18:32:55.409Z"
             }
           ]
         }

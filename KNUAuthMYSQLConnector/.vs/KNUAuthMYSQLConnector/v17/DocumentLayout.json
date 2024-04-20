@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{AA9B2394-D7DE-473F-81D2-EA3DBD12E572}|KNUAuthMYSQLConnector.csproj|solutionrelative:mysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\Connector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Connector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA9B2394-D7DE-473F-81D2-EA3DBD12E572}|KNUAuthMYSQLConnector.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthmysqlconnector\\dbuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA9B2394-D7DE-473F-81D2-EA3DBD12E572}|KNUAuthMYSQLConnector.csproj|solutionrelative:dbuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA9B2394-D7DE-473F-81D2-EA3DBD12E572}|KNUAuthMYSQLConnector.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthmysqlconnector\\connector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA9B2394-D7DE-473F-81D2-EA3DBD12E572}|KNUAuthMYSQLConnector.csproj|solutionrelative:connector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "dbUser.cs",
+              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\dbUser.cs",
+              "RelativeDocumentMoniker": "dbUser.cs",
+              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\dbUser.cs",
+              "RelativeToolTip": "dbUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T21:06:31.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Connector.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\Connector.cs",
               "RelativeDocumentMoniker": "Connector.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\Connector.cs",
               "RelativeToolTip": "Connector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T17:57:47.178Z",
               "EditorCaption": ""
@@ -41,7 +58,7 @@
               "RelativeDocumentMoniker": "MySQL.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
               "RelativeToolTip": "MySQL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAL0AAACPAAAA",
+              "ViewState": "AQIAAPIAAAAAAAAAAAAcwB8BAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T14:42:58.874Z",
               "EditorCaption": ""

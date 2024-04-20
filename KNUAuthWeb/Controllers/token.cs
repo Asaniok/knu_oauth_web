@@ -39,16 +39,17 @@ namespace KNUOAuthApi.Controllers
                 if (cSecret == null) { return StatusCode(500, "Error: client_secret is Empty!"); }
                 if (authCode == null) { return StatusCode(500, "Error: code is Empty!"); }
                 if (reURI == null) { return StatusCode(500, "Error: redirect_uri is Empty!"); }
+                int user_id = MySQL.getUserIdByCode(connector, authCode);
                 if (MySQL.checkCode(connector, authCode, cID))
                 {
                     token = new Token
                     {
                         type = "bearer",
-                        acces_token = genToken(cID + authCode + DateTime.Now.Ticks),
+                        acces_token = genToken(cID + authCode + user_id + DateTime.Now.Ticks),
                         expires_in = 86400,
-                        refresh_token = genToken(cID + authCode + cSecret + DateTime.Now.Ticks)
+                        refresh_token = genToken(cID + authCode + cSecret + user_id + DateTime.Now.Ticks)
                     };
-                    MySQL.AddTokenB(connector, token.acces_token, cID, token.refresh_token, token.expires_in,token.type);
+                    MySQL.AddTokenB(connector, token.acces_token, user_id, token.refresh_token, token.expires_in,token.type);
                 }
                 else { return StatusCode(500, "Code or client_id incorrect!"); }
             }
