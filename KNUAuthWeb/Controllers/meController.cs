@@ -41,6 +41,7 @@ namespace KNUAuthWeb.Controllers
                 string token = Request.Cookies["user_token"];
                 if (token != null)
                 {
+                    TempData["viewprofile"] = "viewprofile";
                     dbUser user = MySQL.getUserByToken(connector, token);
                     if (user != null)
                     {
