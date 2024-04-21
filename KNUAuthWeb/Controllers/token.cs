@@ -11,6 +11,12 @@ namespace KNUOAuthApi.Controllers
     [ApiController]
     public class token : ControllerBase
     {
+        private readonly IConfiguration _configuration;
+
+        public token(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         [HttpPost]
         public IActionResult Post(
             )
