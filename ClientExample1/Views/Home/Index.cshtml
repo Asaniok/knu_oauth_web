@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            @if (TempData["user"] == null)
+            {
+                <H1>Увійти за допомогою</H1><br>
+                <button type="submit">KNUAuth</button>
+            }
+            else if (@TempData["user"] != null){
+                <H1>Вітаємо</H1> @TempData["user"]
+
+                <br>
+            }
+        }
+    </p>
+</div>
