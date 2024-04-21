@@ -138,6 +138,7 @@ namespace KNUAuthWeb.Controllers
             {
                 return RedirectToAction("Index","Home");
             }
+            Response.Cookies.Delete("user_token");
             return RedirectToAction("grant");
             //string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
             //if (!MySQL.addCode(connector, code, 300, scope, client_id, userId)) { return RedirectToAction("Home"); }
@@ -222,6 +223,7 @@ namespace KNUAuthWeb.Controllers
             connector.user = "root";
             connector.password = "Qw123456";
             connector.server = "localhost";
+            if (Request.Cookies["user_token"]==null) { return RedirectToAction("Index","Home"); }
             string scope = Request.Cookies["scope"], state = Request.Cookies["state"], client_id = Request.Cookies["client_id"], responseUrl = Request.Cookies["responseUrl"];
             string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
             if (!MySQL.addCode(connector, code, 300, scope, int.Parse(client_id), MySQL.getUserByToken(connector,Request.Cookies["user_token"]).id)) { return RedirectToAction("Home"); }

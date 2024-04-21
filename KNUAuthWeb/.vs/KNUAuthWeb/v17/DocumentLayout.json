@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\oauthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\meController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\grant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\grant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\meController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\me\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -95,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "meController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs",
               "RelativeDocumentMoniker": "Controllers\\meController.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs",
               "RelativeToolTip": "Controllers\\meController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAQwCgAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T21:04:48.457Z",
               "EditorCaption": ""
@@ -227,7 +227,7 @@
               "RelativeDocumentMoniker": "Controllers\\oauthController.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeToolTip": "Controllers\\oauthController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAiwIsAAAANAAAA",
+              "ViewState": "AQIAALsAAAAAAAAAAAAowOEAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T09:27:15.603Z",
               "EditorCaption": ""
@@ -260,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "login.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\login.cshtml",
