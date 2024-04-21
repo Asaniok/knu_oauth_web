@@ -13,6 +13,7 @@ using System.Web;
 using System.Net;
 using Microsoft.AspNetCore.Http;
 using KNUOAuthApi.Controllers;
+using System.Text.RegularExpressions;
 
 namespace KNUAuthWeb.Controllers
 {
@@ -48,10 +49,28 @@ namespace KNUAuthWeb.Controllers
                 connector.password = "Qw123456";
                 connector.server = "localhost";
                 // Проверка, не занят ли уже такой Username
-                bool existingUser = MySQL.firstOfDefault(connector,model.Username); 
-                if (!existingUser)
+                if (model.Username.Length > 50)
                 {
-                    ModelState.AddModelError("Username", $"This username is already taken. {model.Username}");
+                    ModelState.AddModelError("Username", $"Max 50 symbols");
+                    return View(model);
+                }
+                if(model.Password.Length > 128)
+                {
+                    ModelState.AddModelError("Password", $"Max 128 symbols");
+                    return View(model);
+                }
+                if (Regex.IsMatch(model.Username, @"^[a-zA-Z0-9_]+$"))
+                {
+                    bool existingUser = MySQL.firstOfDefault(connector, model.Username);
+                    if (!existingUser)
+                    {
+                        ModelState.AddModelError("Username", $"This username is already taken. {model.Username}");
+                        return View(model);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("Username", $"Only a-z,A-Z,0-9 and _ supported");
                     return View(model);
                 }
 
