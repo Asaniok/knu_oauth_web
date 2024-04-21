@@ -12,6 +12,7 @@ using System.Net.NetworkInformation;
 using System.Web;
 using System.Net;
 using Microsoft.AspNetCore.Http;
+using System.Text.Json;
 
 namespace KNUAuthWeb.Controllers
 {
@@ -61,6 +62,7 @@ namespace KNUAuthWeb.Controllers
                 }
             }
             catch { }
+            
 
             return View();
         }
@@ -69,7 +71,12 @@ namespace KNUAuthWeb.Controllers
         [HttpPost]
         public ActionResult viewprofile(User model)
         {
-            
+            Connector connector = new Connector();
+            connector.database = "test";
+            connector.port = 3306;
+            connector.user = "root";
+            connector.password = "Qw123456";
+            connector.server = "localhost";
             //if (ModelState.IsValid)
             //{
             //    Connector connector = new Connector();
@@ -92,6 +99,28 @@ namespace KNUAuthWeb.Controllers
             //    // После успешной регистрации можно перенаправить пользователя на другую страницу
             //    return RedirectToAction("login");
             //}
+            try
+            {
+                string token = HttpContext.Request.Query["oauth_token"];
+                string method = HttpContext.Request.Query["method"];
+                if (token != null&method=="getInfo")
+                {
+                    dbUser user = MySQL.getUserByToken(connector, token);
+                    if (user != null)
+                    {
+                        return Ok(JsonSerializer.Serialize(user));
+                    }
+                    else
+                    {
+                        return StatusCode(500, "oauth_token incorrect or expired, try to use refresh_token!");
+                    }
+                }
+                else
+                {
+                    return StatusCode(500, "oauth_token or method empty!");
+                }
+            }
+            catch { }
             return View(model);
         }
     }
