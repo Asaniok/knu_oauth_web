@@ -19,13 +19,16 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        @if (TempData["viewProfile"] == null)
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="home" asp-action="index">Home</a>
+                        </li>
+                        @if (TempData["viewprofile"] !=null)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="viewprofile">Profile</a>
                             </li>
                         }
-                        else
+                        else if (TempData["viewprofile"] == null)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="register">Register</a>

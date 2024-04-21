@@ -113,7 +113,7 @@ namespace KNUOAuthApi.Controllers
         //        StatusCode = (int)HttpStatusCode.OK,Content = "<html><body>Hello World</body></html>"
         //    };
         //}
-        public string genToken(string Seed)
+        public static string genToken(string Seed)
         {
             return BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(Seed))).Replace("-", "").ToLower();
         }

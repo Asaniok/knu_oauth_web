@@ -32,13 +32,34 @@ namespace KNUAuthWeb.Controllers
             catch { }
             try { 
                 string token = Request.Cookies["user_token"];
-                string username = MySQL.getUserNameByToken(connector, token);
-                if (username!="IE01") { 
-                    @TempData["Username"] = username;
-                    @TempData["action"] = "viewProfile";
-                }  } catch { }
-            
+                if(token != null) {
+                    string username = MySQL.getUserNameByToken(connector, token);
+                    if (username != "IE01")
+                    {
+                        @TempData["Username"] = username;
+                        @TempData["viewprofile"] = "viewprofile";
+                        return View();
+                    }
+                }
+                  } catch { }
             return View();
+
+        }
+
+        [HttpPost]
+        public IActionResult index()
+        {
+            try
+            {
+                Response.Cookies.Delete("client_id");
+                Response.Cookies.Delete("responseUrl");
+                Response.Cookies.Delete("state");
+                Response.Cookies.Delete("scope");
+            }
+            catch {}
+            try { Response.Cookies.Delete("user_token"); } catch { }
+            return View();
+
         }
 
 

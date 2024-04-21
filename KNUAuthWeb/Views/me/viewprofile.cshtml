@@ -17,9 +17,8 @@
 
         <h2>@TempData["id"]</h2>
         <h3>Email: </h3>
-
         <h2>@TempData["email"]</h2>
-        <form method="post" action="@Url.Action("login", "oauth")">
+        <form method="post" action="@Url.Action("index", "home")">
             <button type="submit">Вийти</button>
         </form>
     }

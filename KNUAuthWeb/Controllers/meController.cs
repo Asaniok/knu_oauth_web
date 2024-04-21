@@ -54,6 +54,10 @@ namespace KNUAuthWeb.Controllers
                         return RedirectToAction("login", "oauth");
                     }
                 }
+                else
+                {
+                    
+                }
             }
             catch { }
 

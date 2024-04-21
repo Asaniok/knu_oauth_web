@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbWVcdmlld3Byb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[S:/KNU/Диплом/KNUAuthWeb/Views/oauth/grant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhcZ3JhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [S:/KNU/Диплом/KNUAuthWeb/Views/oauth/grantConfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhcZ3JhbnRDb25maXJtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

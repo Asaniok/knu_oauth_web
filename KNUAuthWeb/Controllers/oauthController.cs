@@ -12,6 +12,7 @@ using System.Net.NetworkInformation;
 using System.Web;
 using System.Net;
 using Microsoft.AspNetCore.Http;
+using KNUOAuthApi.Controllers;
 
 namespace KNUAuthWeb.Controllers
 {
@@ -65,23 +66,37 @@ namespace KNUAuthWeb.Controllers
         [HttpGet]
         public IActionResult login()
         {
+
             string scope = Request.Cookies["scope"];
             //string scope = HttpContext.Request.Query["scope"];
-            if (scope != null)
+            if (scope != null & Request.Cookies["user_token"] == null)
             {
+                TempData["viewprofile"] = null;
                 TempData["scope"] = scope;
                 TempData["login.text"] = "Авторизувати";
+            }
+            else if (Request.Cookies["user_token"]!=null)
+            {
+                Response.Cookies.Delete("client_id");
+                Response.Cookies.Delete("responseUrl");
+                Response.Cookies.Delete("state");
+                Response.Cookies.Delete("scope");
+                TempData["login.text"] = "Увійти";
+                TempData["viewprofile"] = null;
+                TempData["scope"] = null;
             }
             else
             {
                 TempData["login.text"] = "Увійти";
                 TempData["scope"] = null;
             }
+
             return View();
         }
         [HttpPost]
         public IActionResult login(User model)
         {
+            TempData["Error"] = $"";
             Connector connector = new Connector();
             connector.database = "test";
             connector.port = 3306;
@@ -100,7 +115,18 @@ namespace KNUAuthWeb.Controllers
             {
                 Expires = DateTime.Now.AddMinutes(90)
             };
-            Response.Cookies.Append("user_token", MySQL.getActualToken(connector,userId), cookieOptions);
+            string user_token = MySQL.getActualToken(connector, userId);
+            if(user_token == "IE01")
+            {
+                string tokenNew = token.genToken(userId+"");
+                MySQL.AddTokenB(connector, tokenNew,userId, token.genToken(userId + "1"),999999999,"bearer","admin");
+                Response.Cookies.Append("user_token", tokenNew, cookieOptions);
+            }
+            else
+            {
+                Response.Cookies.Append("user_token", MySQL.getActualToken(connector, userId), cookieOptions);
+            }
+            
             try
             {
                 scope = Request.Cookies["scope"];
@@ -112,12 +138,13 @@ namespace KNUAuthWeb.Controllers
             {
                 return RedirectToAction("Index","Home");
             }
-            string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
-            if (!MySQL.addCode(connector, code, 300, scope, client_id, userId)) { return RedirectToAction("Home"); }
-            if (state != null)
-            { return Redirect(responseUrl + $"?code={code}&state={state}"); }
-            else
-            { return Redirect(responseUrl + $"?code={code}"); }
+            return RedirectToAction("grant");
+            //string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
+            //if (!MySQL.addCode(connector, code, 300, scope, client_id, userId)) { return RedirectToAction("Home"); }
+            //if (state != null)
+            //{ return Redirect(responseUrl + $"?code={code}&state={state}"); }
+            //else
+            //{ return Redirect(responseUrl + $"?code={code}"); }
         }
         [HttpGet]
         public IActionResult OK()
@@ -139,6 +166,10 @@ namespace KNUAuthWeb.Controllers
             connector.user = "root";
             connector.password = "Qw123456";
             connector.server = "localhost";
+            Response.Cookies.Delete("client_id");
+            Response.Cookies.Delete("responseUrl");
+            Response.Cookies.Delete("state");
+            Response.Cookies.Delete("scope");
             string rType = ""; string rUrl = ""; string scope = ""; string state = ""; int cID = 0;
             if (HttpContext.Request.Query.ContainsKey("response_type")) { rType = HttpContext.Request.Query["response_type"]; if (rType == null) { return StatusCode(500, "Error: response_type is Empty!"); } }
             if (HttpContext.Request.Query.ContainsKey("client_id")) { cID = int.Parse(HttpContext.Request.Query["client_id"]); if (cID == 0) { return StatusCode(500, "Error: client_id is Empty!"); } }
@@ -153,12 +184,55 @@ namespace KNUAuthWeb.Controllers
             {
                 Expires = DateTime.Now.AddMinutes(5)
             };
-            Response.Cookies.Append("client_id", $"{cID}", cookieOptions);
-            Response.Cookies.Append("responseUrl", $"{rUrl}", cookieOptions);
-            Response.Cookies.Append("state", $"{state}", cookieOptions);
-            Response.Cookies.Append("scope", $"{scope}", cookieOptions);
-            return RedirectToAction("login"/*, new { client_id = cID, responseUrl=rUrl, state = state, scope=scope}*/);
+            if (Request.Cookies["user_token"] == null)
+            {
+                Response.Cookies.Append("client_id", $"{cID}", cookieOptions);
+                Response.Cookies.Append("responseUrl", $"{rUrl}", cookieOptions);
+                Response.Cookies.Append("state", $"{state}", cookieOptions);
+                Response.Cookies.Append("scope", $"{scope}", cookieOptions);
+                return RedirectToAction("login"/*, new { client_id = cID, responseUrl=rUrl, state = state, scope=scope}*/);
+            }
+            else
+            {
+                Response.Cookies.Append("client_id", $"{cID}", cookieOptions);
+                Response.Cookies.Append("responseUrl", $"{rUrl}", cookieOptions);
+                Response.Cookies.Append("state", $"{state}", cookieOptions);
+                Response.Cookies.Append("scope", $"{scope}", cookieOptions);
+                return RedirectToAction("grant");
+            }
+            
 
+        }
+        [HttpGet]
+        public IActionResult grant()
+        {
+            string scope = Request.Cookies["scope"];
+            //string scope = HttpContext.Request.Query["scope"];
+            TempData["viewprofile"] = "viewprofile";
+            TempData["scope"] = scope;
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult grant(User model)
+        {
+            Connector connector = new Connector();
+            connector.database = "test";
+            connector.port = 3306;
+            connector.user = "root";
+            connector.password = "Qw123456";
+            connector.server = "localhost";
+            string scope = Request.Cookies["scope"], state = Request.Cookies["state"], client_id = Request.Cookies["client_id"], responseUrl = Request.Cookies["responseUrl"];
+            string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
+            if (!MySQL.addCode(connector, code, 300, scope, int.Parse(client_id), MySQL.getUserByToken(connector,Request.Cookies["user_token"]).id)) { return RedirectToAction("Home"); }
+            Response.Cookies.Delete("client_id");
+            Response.Cookies.Delete("responseUrl");
+            Response.Cookies.Delete("state");
+            Response.Cookies.Delete("scope");
+            if (state != null)
+            { return Redirect(responseUrl + $"?code={code}&state={state}"); }
+            else
+            { return Redirect(responseUrl + $"?code={code}"); }
         }
     }
 }

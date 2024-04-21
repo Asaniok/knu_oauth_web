@@ -38,19 +38,33 @@
             </div>
         </tr>
     </table>
-    <br>
-    <button type="submit">@TempData["login.text"]</button>
-    <br>
-    <br>
-}
-@if (@TempData["scope"] != null)
-{
-<h1>УВАГА!</h1>
-    <div>Буде видано дозвіл на: @TempData["scope"]</div>
-    <br>
-    <br>
-    <br>
-    @TempData["Error"]
-}else{
+    @if (@TempData["login.text"] != null)
+    {
+        <br>
+        <button type="submit">@TempData["login.text"]</button>
+        <br>
+        <br>
+    }
+    else
+    {
+        <br>
+        <button type="submit">Увійти</button>
+        <br>
+        <br>
+    }
+    @if (@TempData["scope"] != null)
+    {
+        <h1>УВАГА!</h1>
+        <div>Буде видано дозвіл на: @TempData["scope"]</div>
+        <br>
+        <br>
+        <br>
+    }
+    else
+    {
 
+    }
+    @TempData["Error"]
+    
 }
+
