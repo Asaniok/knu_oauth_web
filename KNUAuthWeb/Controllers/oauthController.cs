@@ -116,7 +116,8 @@ namespace KNUAuthWeb.Controllers
                 Expires = DateTime.Now.AddMinutes(90)
             };
             string user_token = MySQL.getActualToken(connector, userId);
-            if(user_token == "IE01")
+            Response.Cookies.Delete("user_token");
+            if (user_token == "IE01")
             {
                 string tokenNew = token.genToken(userId+"");
                 MySQL.AddTokenB(connector, tokenNew,userId, token.genToken(userId + "1"),999999999,"bearer","admin");
@@ -138,7 +139,6 @@ namespace KNUAuthWeb.Controllers
             {
                 return RedirectToAction("Index","Home");
             }
-            Response.Cookies.Delete("user_token");
             return RedirectToAction("grant");
             //string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
             //if (!MySQL.addCode(connector, code, 300, scope, client_id, userId)) { return RedirectToAction("Home"); }
