@@ -3,7 +3,9 @@ using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Security.Cryptography;
 using System.Text;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace KNUAuthWeb.Controllers
 {
@@ -18,21 +20,28 @@ namespace KNUAuthWeb.Controllers
         [HttpGet]
         public async Task<IActionResult> IndexAsync(string code, string state)
         {
-            string queryString = $"?code={code}&client_id=1&grant_type=authorization_code";
+            var cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.Now.AddMinutes(5)
+            }; 
             if (state == "asdddddwsdasd")
             {
-                 HttpClient client = new HttpClient();
-                var httpContent = new StringContent("", Encoding.UTF8, "application/json");
-                var response = await client.PostAsync($"https://hotducks.org/oauth/token{queryString}",httpContent);
-                var jsonResponse = await response.Content.ReadAsStringAsync();
-                JObject jsonPost = JObject.Parse(jsonResponse);
-                string acces_token = (string)jsonPost["acces_token"];
-                //http://localhost:5000/me/viewprofile?oauth_token=9c901bcdf9535a7eda762f85d189a0c6326e879e0c1baffe69da02de70df3a879bf0e2f9be3f46eba678b6bfb714ad60f1109393dda73ab1673c8ad1d8ea4d0d&method=getInfo
-                response = await client.PostAsync($"https://hotducks.org/me/viewprofile?oauth_token={acces_token}&method=getInfo", httpContent);
-                jsonResponse = await response.Content.ReadAsStringAsync();
-                jsonPost = JObject.Parse(jsonResponse);
-                string user = (string)jsonPost["user"];
-                TempData["user"] = user;
+                try
+                {
+                    HttpClient client = new HttpClient();
+                    var httpContent = new StringContent("", Encoding.UTF8, "application/json");
+                    string queryString = $"?code={code}&client_id=1&grant_type=authorization_code";
+                    var response = await client.PostAsync($"https://hotducks.org/oauth/token{queryString}", httpContent);
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    JObject jsonPost = JObject.Parse(jsonResponse);
+                    string acces_token = (string)jsonPost["acces_token"];
+                    //http://localhost:5000/me/viewprofile?oauth_token=9c901bcdf9535a7eda762f85d189a0c6326e879e0c1baffe69da02de70df3a879bf0e2f9be3f46eba678b6bfb714ad60f1109393dda73ab1673c8ad1d8ea4d0d&method=getInfo
+                    response = await client.PostAsync($"https://hotducks.org/me/viewprofile?oauth_token={acces_token}&method=getInfo", httpContent);
+                    jsonResponse = await response.Content.ReadAsStringAsync();
+                    jsonPost = JObject.Parse(jsonResponse);
+                    string user = (string)jsonPost["user"];
+                    TempData["user"] = user;
+                }catch { return View(); }
             }
 
             return View();
