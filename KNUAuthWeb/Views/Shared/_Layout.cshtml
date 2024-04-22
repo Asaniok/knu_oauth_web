@@ -24,9 +24,16 @@
                         </li>
                         @if (TempData["viewprofile"] !=null)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="viewprofile">Profile</a>
-                            </li>
+                            @if (TempData["username"]==null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="viewprofile">Profile</a>
+                                </li>
+                            }else{
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="viewprofile">[ @TempData["username"] ]</a>
+                                </li>
+                            }
                         }
                         else if (TempData["viewprofile"] == null)
                         {

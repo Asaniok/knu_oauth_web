@@ -236,17 +236,39 @@ namespace KNUAuthWeb.Controllers
         [HttpGet]
         public IActionResult grant()
         {
+            Connector connector = new Connector();
+            connector.database = _configuration["database"];
+            connector.port = int.Parse(_configuration["port"]);
+            connector.user = _configuration["user"];
+            connector.password = _configuration["password"];
+            connector.server = _configuration["server"];
+            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             string scope = Request.Cookies["scope"];
             //string scope = HttpContext.Request.Query["scope"];
             TempData["viewprofile"] = "viewprofile";
             TempData["scope"] = scope;
+            try
+            {
+                string token = Request.Cookies["user_token"];
+                if (token != null)
+                {
+                    string username = MySQL.getUserNameByToken(connector, token);
+                    if (username != "IE01")
+                    {
+                        TempData["Username"] = username;
+                        TempData["viewprofile"] = "viewprofile";
+                        return View();
+                    }
+                }
+            }
+            catch { }
 
             return View();
         }
         [HttpPost]
         public IActionResult grant(User model)
         {
- Connector connector = new Connector();
+        Connector connector = new Connector();
                 connector.database = _configuration["database"];
                 connector.port = int.Parse(_configuration["port"]);
                 connector.user = _configuration["user"];
