@@ -36,7 +36,7 @@ td{
     cursor: pointer;
     display: flex;
     align-items: center;
-    width: 130px;
+    width: auto;
     border: 2px solid red;
 }
     .kbutton:hover {

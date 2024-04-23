@@ -30,17 +30,19 @@ namespace KNUAuthWeb.Controllers
                 {
                     HttpClient client = new HttpClient();
                     var httpContent = new StringContent("", Encoding.UTF8, "application/json");
-                    string queryString = $"?code={code}&client_id=1&grant_type=authorization_code";
+                    string queryString = $"?code={code}&client_id=1&grant_type=authorization_code&scope=getInfo";
                     var response = await client.PostAsync($"https://hotducks.org/oauth/token{queryString}", httpContent);
+                    //var response = await client.PostAsync($"http://localhost:5000/oauth/token{queryString}", httpContent);
                     var jsonResponse = await response.Content.ReadAsStringAsync();
                     JObject jsonPost = JObject.Parse(jsonResponse);
                     string acces_token = (string)jsonPost["acces_token"];
-                    //http://localhost:5000/me/viewprofile?oauth_token=9c901bcdf9535a7eda762f85d189a0c6326e879e0c1baffe69da02de70df3a879bf0e2f9be3f46eba678b6bfb714ad60f1109393dda73ab1673c8ad1d8ea4d0d&method=getInfo
-                    response = await client.PostAsync($"https://hotducks.org/me/viewprofile?oauth_token={acces_token}&method=getInfo", httpContent);
+                    //response = await client.PostAsync($"http://localhost:5000/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
+                    response = await client.PostAsync($"https://hotducks.org/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
                     jsonResponse = await response.Content.ReadAsStringAsync();
                     jsonPost = JObject.Parse(jsonResponse);
-                    string user = (string)jsonPost["user"];
-                    TempData["user"] = user;
+                    string surname = (string)(jsonPost["surname"]);
+                    string firstname = (string)(jsonPost["firstname"]);
+                    TempData["user"] = surname + " "+firstname;
                 }catch { return View(); }
             }
 
@@ -51,6 +53,7 @@ namespace KNUAuthWeb.Controllers
         public IActionResult Index()
         {
             int client = 1;
+            //return Redirect($"http://localhost:5000/oauth/authorize?response_type=code&client_id={client}&redirect_uri=http://localhost:5001&scope=getInfo&state=asdddddwsdasd");
             return Redirect($"https://hotducks.org/oauth/authorize?response_type=code&client_id={client}&redirect_uri=https://client.hotducks.org&scope=getInfo&state=asdddddwsdasd");
         }
     }

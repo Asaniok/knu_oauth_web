@@ -161,9 +161,9 @@ namespace KNUAuthMYSQLConnector
             if (count == 0) {return false; }
             return true;
         }
-        public static bool checkCode(Connector c, string code, int client_id)
+        public static string checkCode(Connector c, string code, int client_id)
         {
-            if (c == null) { return false; }
+            if (c == null) { return "IE01"; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
@@ -173,24 +173,25 @@ namespace KNUAuthMYSQLConnector
             if (reader.Read())
             {
                 int count = int.Parse(reader["c"].ToString());
-                if (count == 0) {  conn.CloseAsync(); return false; }
+                if (count == 0) {  conn.CloseAsync(); return "IE01"; }
             }
             conn.CloseAsync();
             conn.Open();
             cmd = conn.CreateCommand();
             cmd.CommandText = $"DELETE FROM codes WHERE (UNIX_TIMESTAMP(CURRENT_TIMESTAMP)-(UNIX_TIMESTAMP(created_at))>exptime);" +
-                $" SELECT ((UNIX_TIMESTAMP(created_at)-UNIX_TIMESTAMP(CURRENT_TIMESTAMP))+exptime) as time FROM codes WHERE client_id={client_id} and code='{code}';";
+                $" SELECT ((UNIX_TIMESTAMP(created_at)-UNIX_TIMESTAMP(CURRENT_TIMESTAMP))+exptime) as time, scope FROM codes WHERE client_id={client_id} and code='{code}';";
             reader = cmd.ExecuteReader();
             if (reader.Read())
             {
                 int time = int.Parse(reader["time"].ToString());
+                string scope = reader["scope"].ToString();
                 Execute(c, $"DELETE FROM codes WHERE client_id={client_id} and code='{code}';");
                 conn.CloseAsync();
-                if (time<=0) { return false; }
-                else if(time>0) { return true; }
+                if (time<=0) { return "TS_EXPIRED"; }
+                else if(time>0) { return scope; }
             }
-            else{  return false; }
-            return true;
+            else{  return "IE01"; }
+            return "IE01";
         }
         public static bool checkToken(Connector c, string token, int user_id)
         {
@@ -277,14 +278,17 @@ namespace KNUAuthMYSQLConnector
             }
             return "IE01";
         }
-        public static dbUser getUserByToken(Connector c, string token)
+        public static dbUser getUserByToken(Connector c, string token, string access = null)
         {
             if (c == null) { return null; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.lastname,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
+            if(access!=null)
+                cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.lastname,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id AND T.scope='{access}';";
+            else
+                cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.lastname,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {

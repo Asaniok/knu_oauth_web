@@ -80,7 +80,7 @@ namespace KNUAuthWeb.Controllers
                 string method = HttpContext.Request.Query["method"];
                 if (token != null&method=="getInfo")
                 {
-                    dbUser user = MySQL.getUserByToken(connector, token);
+                    dbUser user = MySQL.getUserByToken(connector, token, "getInfo");
                     if (user != null)
                     {
                         return Ok(JsonSerializer.Serialize(user));

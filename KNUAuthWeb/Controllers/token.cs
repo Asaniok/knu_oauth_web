@@ -52,16 +52,21 @@ namespace KNUOAuthApi.Controllers
                 if (authCode == null) { return StatusCode(500, "Error: code is Empty!"); }
                 if (reURI == null) { return StatusCode(500, "Error: redirect_uri is Empty!"); }
                 int user_id = MySQL.getUserIdByCode(connector, authCode);
-                if (MySQL.checkCode(connector, authCode, cID))
+                string codeScope = MySQL.checkCode(connector, authCode, cID);
+                if (codeScope!=null & codeScope!="IE01" & codeScope!= "TS_EXPIRED")
                 {
                     token = new Token
                     {
                         type = "bearer",
+                        scope = codeScope,
                         acces_token = genToken(cID + authCode + user_id + DateTime.Now.Ticks),
                         expires_in = int.Parse(_configuration["tokenExpTime"]),
                         refresh_token = genToken(cID + authCode + cSecret + user_id + DateTime.Now.Ticks)
                     };
-                    MySQL.AddTokenB(connector, token.acces_token, user_id, token.refresh_token, token.expires_in,token.type);
+                    MySQL.AddTokenB(connector, token.acces_token, user_id, token.refresh_token, token.expires_in,token.type,token.scope);
+                }else if (codeScope== "TS_EXPIRED")
+                {
+                    return StatusCode(500, "Code expired!");
                 }
                 else { return StatusCode(500, "Code or client_id incorrect!"); }
             }
@@ -71,6 +76,7 @@ namespace KNUOAuthApi.Controllers
                 token = new Token
                 {
                     type = "bearer",
+                    scope = scope,
                     acces_token = genToken(refresh_token + DateTime.Now.Ticks),
                     expires_in = int.Parse(_configuration["tokenExpTime"]),
                     refresh_token = genToken(refresh_token + DateTime.Now.Ticks + 1)

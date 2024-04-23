@@ -114,7 +114,7 @@ namespace KNUAuthWeb.Controllers
                 TempData["scope"] = scope;
                 TempData["login.text"] = "Авторизувати";
             }
-            else if (Request.Cookies["user_token"]!=null)
+            else if (Request.Cookies["user_token"]!=null & scope != null)
             {
                 Response.Cookies.Delete("client_id");
                 Response.Cookies.Delete("responseUrl");
@@ -122,7 +122,7 @@ namespace KNUAuthWeb.Controllers
                 Response.Cookies.Delete("scope");
                 TempData["login.text"] = "Увійти";
                 TempData["viewprofile"] = null;
-                TempData["scope"] = null;
+                TempData["scope"] = scope;
             }
             else
             {
@@ -142,6 +142,7 @@ namespace KNUAuthWeb.Controllers
             if (userId == 0)
             {
                 ModelState.AddModelError("Password", $"");
+                if(Request.Cookies["scope"] != null) { TempData["scope"] = Request.Cookies["scope"]; }
                 TempData["Error"] = $"Password or username incorrect!";
                 return View(model);
             }

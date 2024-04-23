@@ -4,11 +4,13 @@
 
 @using (Html.BeginForm(FormMethod.Post))
 {
-    <div class="text-center">
+    <div>
         <h3>Увага!</h3><br>
+        <hr style="width:250px">
         <h6>Буде надано наступний дозвіл:</h6> @TempData["scope"]
         <br>
-        <button type="submit">Надати</button>
+        <hr style="width:250px">
+        <button class="kbutton" type="submit">Надати</button>
     </div>
 }
 @* <div class="text-center">
