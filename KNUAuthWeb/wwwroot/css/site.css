@@ -20,3 +20,42 @@ html {
 body {
   margin-bottom: 60px;
 }
+hr {
+    border: 1px solid black; /* Стиль границы (черный цвет) */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+td{
+    width:350px;
+}
+.kbutton {
+    background-color: #e6e6e6;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 130px;
+    border: 2px solid red;
+}
+    .kbutton:hover {
+        transition: background-color 0.3s ease;
+        background-color: rgb(164, 164, 164, 0.5);
+    }
+
+.kbutton img {
+        width: 32px;
+        height: 32px;
+        margin-right: 5px;
+    }    
+
+.kbutton span {
+    margin-right: auto; 
+}
+.input {
+    padding: 10px 10px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+}

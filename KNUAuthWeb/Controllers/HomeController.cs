@@ -13,8 +13,7 @@ namespace KNUAuthWeb.Controllers
         {
             _configuration = configuration;
         }
-        [HttpGet]
-        public IActionResult Index()
+        public Connector getConnector()
         {
             Connector connector = new Connector();
             connector.database = _configuration["database"];
@@ -22,6 +21,12 @@ namespace KNUAuthWeb.Controllers
             connector.user = _configuration["user"];
             connector.password = _configuration["password"];
             connector.server = _configuration["server"];
+            return connector;
+        }
+        [HttpGet]
+        public IActionResult Index()
+        {
+            Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             try
             {

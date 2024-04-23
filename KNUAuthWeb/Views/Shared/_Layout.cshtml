@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">KNUAuthWeb</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img style="width:50px; height:50px" src="~/src/img/gerb3.png" alt="Иконка"> KNUAuthWeb</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,28 +20,28 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="home" asp-action="index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="home" asp-action="index">Головна</a>
                         </li>
                         @if (TempData["viewprofile"] !=null)
                         {
                             @if (TempData["username"]==null)
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="viewprofile">Profile</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="profile">Профіль</a>
                                 </li>
                             }else{
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="viewprofile">[ @TempData["username"] ]</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="profile">[ @TempData["username"] ]</a>
                                 </li>
                             }
                         }
                         else if (TempData["viewprofile"] == null)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="register">Register</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="register">Реєстрація</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="login">Login</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="login">Вхід</a>
                         </li>
                         }
                     </ul>

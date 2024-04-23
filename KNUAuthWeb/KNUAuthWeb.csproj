@@ -20,4 +20,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\src\img\" />
+  </ItemGroup>
+
 </Project>

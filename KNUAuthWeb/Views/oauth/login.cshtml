@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Login";
 }
-<h2>Login Page</h2>
+<h2>Вхід до акаунту</h2>
 
 @using (Html.BeginForm(FormMethod.Post))
 {
@@ -19,39 +19,38 @@
         }
     </style>
     <table>
+        <hr style="width:250px">
         <tr>
             <div>
-                @Html.LabelFor(m => m.Username)
+                Логін
             </div>
             <div>
-                @Html.TextBoxFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, htmlAttributes: new { @class = "input" })
                 @Html.ValidationMessageFor(m => m.Username)
             </div>
             
         </tr>
         <tr>
             <div>
-                @Html.LabelFor(m => m.Password)
+                Пароль
             </div>
             <div>
-                @Html.PasswordFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, htmlAttributes: new { @class = "input" })
             </div>
         </tr>
+        <hr style="width:250px">
+        <tr>
+            @if (@TempData["login.text"] != null)
+            {
+                <button class="kbutton" type="submit"><img src="~/src/img/gerb3.png" alt="Иконка">@TempData["login.text"]</button>
+            }
+            else
+            {
+                <button class="kbutton" type="submit"><img src="~/src/img/gerb3.png" alt="Иконка">Увійти</button>
+            }
+        </tr>
     </table>
-    @if (@TempData["login.text"] != null)
-    {
-        <br>
-        <button type="submit">@TempData["login.text"]</button>
-        <br>
-        <br>
-    }
-    else
-    {
-        <br>
-        <button type="submit">Увійти</button>
-        <br>
-        <br>
-    }
+    
     @if (@TempData["scope"] != null)
     {
         <h1>УВАГА!</h1>

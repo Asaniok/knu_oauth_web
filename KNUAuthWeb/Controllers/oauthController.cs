@@ -1,25 +1,13 @@
 ﻿using KNUAuthMYSQLConnector;
 using KNUAuthWeb.Models;
-using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 using System.Text;
-using static System.Net.WebRequestMethods;
-using System.Configuration;
-using MySqlX.XDevAPI;
-using System.Security.Policy;
-using System.Net.NetworkInformation;
-using System.Web;
-using System.Net;
-using Microsoft.AspNetCore.Http;
 using KNUOAuthApi.Controllers;
 using System.Text.RegularExpressions;
-using Microsoft.Extensions.Configuration;
 
 namespace KNUAuthWeb.Controllers
 {
-    
-    //[Route("/kauth/[controller]")]
     public class oauthController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -28,43 +16,40 @@ namespace KNUAuthWeb.Controllers
         {
             _configuration = configuration;
         }
-        // GET: /xxx/Register
+        public Connector getConnector()
+        {
+            Connector connector = new Connector();
+            connector.database = _configuration["database"];
+            connector.port = int.Parse(_configuration["port"]);
+            connector.user = _configuration["user"];
+            connector.password = _configuration["password"];
+            connector.server = _configuration["server"];
+            return connector;
+        }
         public ActionResult register()
         {
-            try
-            {
-                Response.Cookies.Delete("client_id");
-                Response.Cookies.Delete("responseUrl");
-                Response.Cookies.Delete("state");
-                Response.Cookies.Delete("scope");
-            }
-            catch { }
+            Response.Cookies.Delete("client_id");
+            Response.Cookies.Delete("responseUrl");
+            Response.Cookies.Delete("state");
+            Response.Cookies.Delete("scope");
             return View();
         }
-        
-        // POST: /xxx/Register
         [HttpPost]
         public ActionResult register(User model)
         {
-            
             if (ModelState.IsValid)
             {
-                Connector connector = new Connector();
-                connector.database = _configuration["database"];
-                connector.port = int.Parse(_configuration["port"]);
-                connector.user = _configuration["user"];
-                connector.password = _configuration["password"];
-                connector.server = _configuration["server"];
+                Connector connector = getConnector();
+                dbUser newUser;
                 if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
-                // Проверка, не занят ли уже такой Username
                 if (model.Username.Length > 50)
                 {
-                    ModelState.AddModelError("Username", $"Max 50 symbols");
+                    ModelState.AddModelError("Username", $"Max 50 знаків");
                     return View(model);
                 }
                 if(model.Password.Length > 128)
                 {
-                    ModelState.AddModelError("Password", $"Max 128 symbols");
+                    ModelState.AddModelError("Password", $"Max 128 знаків");
                     return View(model);
                 }
                 if (Regex.IsMatch(model.Username, @"^[a-zA-Z0-9_]+$"))
@@ -72,20 +57,48 @@ namespace KNUAuthWeb.Controllers
                     bool existingUser = MySQL.firstOfDefault(connector, model.Username);
                     if (!existingUser)
                     {
-                        ModelState.AddModelError("Username", $"This username is already taken. {model.Username}");
+                        ModelState.AddModelError("Username", $"Цей логін вже зайнятий.");
                         return View(model);
                     }
                 }
                 else
                 {
-                    ModelState.AddModelError("Username", $"Only a-z,A-Z,0-9 and _ supported");
+                    ModelState.AddModelError("Username", $"Допустимі лише a-z,A-Z,0-9 та _");
                     return View(model);
                 }
-
-                // Добавление нового пользователя в базу данных
-                MySQL.addUser(connector,model.Username, BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Password+model.Username))).Replace("-", "").ToLower());
-
-                // После успешной регистрации можно перенаправить пользователя на другую страницу
+                if (Regex.IsMatch(model.RestoreEmail, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"))
+                {
+                    bool existingEmail = MySQL.checkEmailUnique(connector, model.RestoreEmail);
+                    if (!existingEmail)
+                    {
+                        ModelState.AddModelError("RestoreEmail", $"Цей email вже використаноб спробуйте інший.");
+                        return View(model);
+                    }
+                }
+                if (!Regex.IsMatch(model.FirstName, @"^[А-Я]{1}[а-я]+$"))
+                {
+                    ModelState.AddModelError("FirstName", $"Допустимі лише А-Я,а-я");
+                    return View(model);
+                }
+                if (!Regex.IsMatch(model.LastName, @"^[А-Я]{1}[а-я]+$"))
+                {
+                    ModelState.AddModelError("LastName", $"Допустимі лише А-Я,а-я");
+                    return View(model);
+                }
+                if (!Regex.IsMatch(model.Surname, @"^[А-Я]{1}[а-я]+$"))
+                {
+                    ModelState.AddModelError("Surname", $"Допустимі лише А-Я,а-я");
+                    return View(model);
+                }
+                newUser = new dbUser
+                {
+                    user = model.Username,
+                    email = model.RestoreEmail,
+                    surname = model.Surname,
+                    firstname = model.FirstName,
+                    lastname = model.LastName
+                };
+                MySQL.addUser(connector,newUser, BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Password+model.Username))).Replace("-", "").ToLower());
                 return RedirectToAction("login");
             }
             return View(model);
@@ -95,7 +108,6 @@ namespace KNUAuthWeb.Controllers
         {
 
             string scope = Request.Cookies["scope"];
-            //string scope = HttpContext.Request.Query["scope"];
             if (scope != null & Request.Cookies["user_token"] == null)
             {
                 TempData["viewprofile"] = null;
@@ -124,12 +136,7 @@ namespace KNUAuthWeb.Controllers
         public IActionResult login(User model)
         {
             TempData["Error"] = $"";
-            Connector connector = new Connector();
-            connector.database = _configuration["database"];
-            connector.port = int.Parse(_configuration["port"]);
-            connector.user = _configuration["user"];
-            connector.password = _configuration["password"];
-            connector.server = _configuration["server"];
+            Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             int userId = MySQL.checkAuth(connector, model.Username, BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Password + model.Username))).Replace("-", "").ToLower());
             if (userId == 0)
@@ -189,12 +196,7 @@ namespace KNUAuthWeb.Controllers
         [HttpGet]
         public IActionResult Authorize()
         {
-            Connector connector = new Connector();
-            connector.database = _configuration["database"];
-            connector.port = int.Parse(_configuration["port"]);
-            connector.user = _configuration["user"];
-            connector.password = _configuration["password"];
-            connector.server = _configuration["server"];
+            Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             Response.Cookies.Delete("client_id");
             Response.Cookies.Delete("responseUrl");
@@ -220,7 +222,7 @@ namespace KNUAuthWeb.Controllers
                 Response.Cookies.Append("responseUrl", $"{rUrl}", cookieOptions);
                 Response.Cookies.Append("state", $"{state}", cookieOptions);
                 Response.Cookies.Append("scope", $"{scope}", cookieOptions);
-                return RedirectToAction("login"/*, new { client_id = cID, responseUrl=rUrl, state = state, scope=scope}*/);
+                return RedirectToAction("login");
             }
             else
             {
@@ -236,15 +238,9 @@ namespace KNUAuthWeb.Controllers
         [HttpGet]
         public IActionResult grant()
         {
-            Connector connector = new Connector();
-            connector.database = _configuration["database"];
-            connector.port = int.Parse(_configuration["port"]);
-            connector.user = _configuration["user"];
-            connector.password = _configuration["password"];
-            connector.server = _configuration["server"];
+            Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             string scope = Request.Cookies["scope"];
-            //string scope = HttpContext.Request.Query["scope"];
             TempData["viewprofile"] = "viewprofile";
             TempData["scope"] = scope;
             try
@@ -268,13 +264,8 @@ namespace KNUAuthWeb.Controllers
         [HttpPost]
         public IActionResult grant(User model)
         {
-        Connector connector = new Connector();
-                connector.database = _configuration["database"];
-                connector.port = int.Parse(_configuration["port"]);
-                connector.user = _configuration["user"];
-                connector.password = _configuration["password"];
-                connector.server = _configuration["server"];
-                if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
+            Connector connector = getConnector();
+            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             if (Request.Cookies["user_token"]==null) { return RedirectToAction("Index","Home"); }
             string scope = Request.Cookies["scope"], state = Request.Cookies["state"], client_id = Request.Cookies["client_id"], responseUrl = Request.Cookies["responseUrl"];
             string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
@@ -288,5 +279,6 @@ namespace KNUAuthWeb.Controllers
             else
             { return Redirect(responseUrl + $"?code={code}"); }
         }
+
     }
 }

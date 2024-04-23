@@ -4,7 +4,7 @@
     ViewBag.Title = "Register";
 }
 
-<h2>Register Page</h2>
+<h2>Реєстрація</h2>
 
 @using (Html.BeginForm(FormMethod.Post))
 {
@@ -20,29 +20,68 @@
         }
     </style>
     <table>
+        <hr style="width:250px">
         <tr>
             <div>
-                @Html.LabelFor(m => m.Username)
+                Логін
             </div>
             <div>
-                @Html.TextBoxFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, htmlAttributes: new { @class = "input" })
                 @Html.ValidationMessageFor(m => m.Username)
             </div>
             
         </tr>
         <tr>
             <div>
-                @Html.LabelFor(m => m.Password)
+                Пароль
             </div>
             <div>
-                @Html.TextBoxFor(m => m.Password)
+                @Html.TextBoxFor(m => m.Password, htmlAttributes: new { @class = "input" })
                 @Html.ValidationMessageFor(m => m.Password)
             </div>
         </tr>
+        <hr style="width:250px">
+        <tr>
+            <div>
+                Прізвище
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.Surname, htmlAttributes: new { @class = "input" })
+                @Html.ValidationMessageFor(m => m.Surname)
+            </div>
+        </tr>
+        <tr>
+            <div>
+                Ім'я
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.FirstName, htmlAttributes: new { @class = "input" })
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+        </tr>
+        <tr>
+            <div>
+                По-батькові
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.LastName, htmlAttributes: new { @class = "input" })
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+        </tr>
+        <hr style="width:250px">
+        <tr>
+            <div>
+                Email
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.RestoreEmail, htmlAttributes: new { @class = "input" })
+                @Html.ValidationMessageFor(m => m.RestoreEmail)
+            </div>
+        </tr>
+        <hr style="width:250px">
     </table>
-    <br>
 
-   
 
-    <button type="submit">Register</button>
+
+    <button class="kbutton" type="submit" style="width:200px;"><img src="~/src/img/gerb3.png" alt="Иконка">Зареєструватись</button>
 }

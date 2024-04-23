@@ -6,7 +6,7 @@ namespace KNUAuthMYSQLConnector
     public class MySQL
     {
         public static bool Initialize(Connector c) {
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database};charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             using (var cmd = conn.CreateCommand())
             {
@@ -20,19 +20,23 @@ namespace KNUAuthMYSQLConnector
         public static bool Execute(Connector c, string exec)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
-            MySqlConnection conn = new MySqlConnection(connStr);
-            conn.Open();
-            var cmd = conn.CreateCommand();
-            cmd.CommandText = exec;
-            cmd.ExecuteNonQuery();
-            conn.CloseAsync();
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database};charset=utf8";
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connStr);
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = exec;
+                cmd.ExecuteNonQuery();
+                conn.CloseAsync();
+            }
+            catch { return false; }
             return true;
         }
         public static bool AddTokenB(Connector c, string token, int user, string refresh_token, int exptime, string type, string scope = "")
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database} ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -44,7 +48,7 @@ namespace KNUAuthMYSQLConnector
         public static bool refreshTokenR(Connector c, string refresh_token, string access_token, string new_refresh_token, int exptime)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database} ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             try
@@ -60,7 +64,7 @@ namespace KNUAuthMYSQLConnector
         public static bool firstOfDefault(Connector c, string username)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database} ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             try
@@ -75,14 +79,32 @@ namespace KNUAuthMYSQLConnector
             conn.CloseAsync();
             return true;
         }
-        public static bool addUser(Connector c, string username, string password)
+        public static bool checkEmailUnique(Connector c, string email)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            try
+            {
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = $"SELECT count(email) FROM users WHERE email='{email}';";
+                int count = int.Parse(cmd.ExecuteScalar().ToString());
+                conn.CloseAsync();
+                if (count != 0) { return false; }
+            }
+            catch (Exception) { return false; }
+            conn.CloseAsync();
+            return true;
+        }
+        public static bool addUser(Connector c, dbUser user, string password)
+        {
+            if (c == null) { return false; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"INSERT INTO users (user,password) VALUES ('{username}','{password}');";
+            cmd.CommandText = $"INSERT INTO users (user,password,email,surname,lastname,firstname) VALUES ('{user.user}','{password}','{user.email}','{user.surname}','{user.lastname}','{user.firstname}');";
             int count = cmd.ExecuteNonQuery();
             conn.CloseAsync();
             if (count == 0) { return false; }
@@ -91,7 +113,7 @@ namespace KNUAuthMYSQLConnector
         public static int checkAuth(Connector c, string username, string password)
         {
             if (c == null) { return 0; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             try
@@ -112,7 +134,7 @@ namespace KNUAuthMYSQLConnector
         public static bool checkClient(Connector c, int client_id)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -129,7 +151,7 @@ namespace KNUAuthMYSQLConnector
         public static bool addCode(Connector c, string code, int exptime, string scope, int client_id, int user_id)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -142,7 +164,7 @@ namespace KNUAuthMYSQLConnector
         public static bool checkCode(Connector c, string code, int client_id)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -173,7 +195,7 @@ namespace KNUAuthMYSQLConnector
         public static bool checkToken(Connector c, string token, int user_id)
         {
             if (c == null) { return false; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -204,7 +226,7 @@ namespace KNUAuthMYSQLConnector
         public static string getActualToken(Connector c, int user_id)
         {
             if (c == null) { return "IE01"; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -222,7 +244,7 @@ namespace KNUAuthMYSQLConnector
         public static int getUserIdByCode(Connector c, string code)
         {
             if (c == null) { return 0; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -240,7 +262,7 @@ namespace KNUAuthMYSQLConnector
         public static string getUserNameByToken(Connector c, string token)
         {
             if (c == null) { return "IE01"; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
@@ -258,25 +280,31 @@ namespace KNUAuthMYSQLConnector
         public static dbUser getUserByToken(Connector c, string token)
         {
             if (c == null) { return null; }
-            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}";
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"SELECT U.`user`,U.id,U.email FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
+            cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.lastname,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                string username = "", email = "";int id = 0; dbUser user = null;
+                string username = "", email = "", surname="", firstname="",lastname="";int id = 0; dbUser user = null;
                 try
                 {
                     username = reader["user"].ToString();
                     id = int.Parse(reader["id"].ToString());
                     email = reader["email"].ToString();
-                    user=new dbUser
+                    surname = reader["surname"].ToString();
+                    firstname = reader["firstname"].ToString();
+                    lastname = reader["lastname"].ToString();
+                    user = new dbUser
                     {
                         id = id,
                         email = email,
-                        user = username
+                        user = username,
+                        surname = surname,
+                        firstname = firstname,
+                        lastname = lastname
                     };
                     return user;
                 }

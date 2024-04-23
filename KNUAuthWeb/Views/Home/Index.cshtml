@@ -3,7 +3,16 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Диплом студента КНУ</a>.</p>
-    <h1>Вітаємо! </h1> <b>@TempData["Username"]</b>
+    @if (TempData["Username"] != null)
+    {
+        <b class="display-6">Вітаємо, @TempData["Username"]</b>
+    }
+    else
+    {
+        <h1>Вітаємо! </h1>
+    }
+    
+        <p>Шаблон головної сторінки сервісу</a></p>
+
+    
 </div>

@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "View Profile";
+}
+
+<div>
+    @if (TempData["id"] == null)
+    {
+            <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="login">[ Авторизуватись ]</a>
+    }
+    else
+    {
+        <h1 class="display-4">Кабінет користувача</h1>
+        <table style="padding-left: 50px;">
+
+            <tr>
+                <td>
+                    <hr style="width:250px">
+                    <h4>Логін: </h4>
+                    <h3>@TempData["username"]</h3>
+                </td>
+                <td>
+                    <hr style="width:250px">
+                    <h4>Прізвище: </h4>
+                    <h3>@TempData["surname"]</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <hr style="width:250px">
+                    <h4>Унікальний ID:</h4>
+                    <h3>@TempData["id"]</h3>
+                </td>
+                <td>
+                    <hr style="width:250px">
+                    <h4>Імя: </h4>
+                    <h3>@TempData["firstname"]</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <hr style="width:250px">
+                    <h4>Email адреса: </h4>
+                    <h3>@TempData["email"]</h3>
+                    <hr style="width:250px">
+                </td>
+                <td>
+                    <hr style="width:250px">
+                    <h4>По-батькові: </h4>
+                    <h3>@TempData["lastname"]</h3>
+                    <hr style="width:250px">
+                </td>
+            </tr>
+        </table>
+       
+        
+        
+        
+        
+        <form method="post" action="@Url.Action("index", "home")">
+              <button class="kbutton" style="width:90px" type="submit">Вийти</button>
+        </form>
+    }
+</div>

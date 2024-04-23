@@ -2,8 +2,12 @@ CREATE TABLE `users` (
 	`id` INT UNSIGNED KEY NOT NULL AUTO_INCREMENT,
 	`user` CHAR(50) NOT NULL,
 	`email` TEXT NULL DEFAULT NULL,
-	`password` TEXT NOT NULL
+	`password` TEXT NOT NULL,
+	`surname` CHAR(128) NOT NULL,
+	`firstname` CHAR(128) NOT NULL,
+	`lastname` CHAR(128) NOT NULL
 )
+DEFAULT CHARSET=utf8mb4
 COLLATE='utf8mb4_general_ci'
 ;
 
@@ -46,5 +50,6 @@ CREATE TABLE `codeStep` (
 	`state` INT NOT NULL,
 	`created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )
+DEFAULT CHARSET=utf8mb4
 COLLATE='utf8mb4_general_ci'
 ;

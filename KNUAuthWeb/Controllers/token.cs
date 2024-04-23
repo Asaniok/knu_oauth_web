@@ -17,16 +17,22 @@ namespace KNUOAuthApi.Controllers
         {
             _configuration = configuration;
         }
+        public Connector getConnector()
+        {
+            Connector connector = new Connector();
+            connector.database = _configuration["database"];
+            connector.port = int.Parse(_configuration["port"]);
+            connector.user = _configuration["user"];
+            connector.password = _configuration["password"];
+            connector.server = _configuration["server"];
+            return connector;
+        }
         [HttpPost]
         public IActionResult Post(
             )
         {
-            Connector connector = new Connector();
-            connector.database = "test";
-            connector.port = 3306;
-            connector.user = "root";
-            connector.password = "Qw123456";
-            connector.server = "localhost";
+            Connector connector = getConnector();
+            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             string type = "", cSecret = "", authCode = "", reURI = "", refresh_token = "", username = "", password = "", scope = ""; int cID = 0;
             if (HttpContext.Request.Query.ContainsKey("grant_type")) { type = HttpContext.Request.Query["grant_type"]; if (type == null) { return StatusCode(500, "Error: grant_type is Empty!"); } }
             if (HttpContext.Request.Query.ContainsKey("client_id")) {  cID = int.Parse(HttpContext.Request.Query["client_id"]); }
@@ -52,7 +58,7 @@ namespace KNUOAuthApi.Controllers
                     {
                         type = "bearer",
                         acces_token = genToken(cID + authCode + user_id + DateTime.Now.Ticks),
-                        expires_in = 86400,
+                        expires_in = int.Parse(_configuration["tokenExpTime"]),
                         refresh_token = genToken(cID + authCode + cSecret + user_id + DateTime.Now.Ticks)
                     };
                     MySQL.AddTokenB(connector, token.acces_token, user_id, token.refresh_token, token.expires_in,token.type);
@@ -66,7 +72,7 @@ namespace KNUOAuthApi.Controllers
                 {
                     type = "bearer",
                     acces_token = genToken(refresh_token + DateTime.Now.Ticks),
-                    expires_in = 86400,
+                    expires_in = int.Parse(_configuration["tokenExpTime"]),
                     refresh_token = genToken(refresh_token + DateTime.Now.Ticks + 1)
                 };
                 bool check = MySQL.refreshTokenR(connector,refresh_token,token.acces_token,token.refresh_token,token.expires_in);
@@ -92,7 +98,7 @@ namespace KNUOAuthApi.Controllers
                     {
                         type = "string",
                         acces_token = genToken(refresh_token + DateTime.Now.Ticks),
-                        expires_in = 86400,
+                        expires_in = int.Parse(_configuration["tokenExpTime"]),
                         refresh_token = genToken(refresh_token + DateTime.Now.Ticks + 1)
                     };
                 }
@@ -111,14 +117,6 @@ namespace KNUOAuthApi.Controllers
             }
             return Ok(JsonSerializer.Serialize(token));
         }
-        //public ContentResult Index()
-        //{
-        //    return new ContentResult
-        //    {
-        //        ContentType = "text/html",
-        //        StatusCode = (int)HttpStatusCode.OK,Content = "<html><body>Hello World</body></html>"
-        //    };
-        //}
 
         public static string genToken(string Seed)
         {
