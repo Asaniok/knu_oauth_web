@@ -75,17 +75,17 @@ namespace KNUAuthWeb.Controllers
                         return View(model);
                     }
                 }
-                if (!Regex.IsMatch(model.FirstName, @"^[А-Я]{1}[а-я]+$"))
+                if (!Regex.IsMatch(model.FirstName, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
                 {
                     ModelState.AddModelError("FirstName", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.LastName, @"^[А-Я]{1}[а-я]+$"))
+                if (!Regex.IsMatch(model.LastName, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
                 {
                     ModelState.AddModelError("LastName", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.Surname, @"^[А-Я]{1}[а-я]+$"))
+                if (!Regex.IsMatch(model.Surname, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
                 {
                     ModelState.AddModelError("Surname", $"Допустимі лише А-Я,а-я");
                     return View(model);
