@@ -31,17 +31,15 @@ namespace KNUAuthWeb.Controllers
                     HttpClient client = new HttpClient();
                     var httpContent = new StringContent("", Encoding.UTF8, "application/json");
                     string queryString = $"?code={code}&client_id=1&grant_type=authorization_code&scope=getInfo";
-                    var response = await client.PostAsync($"https://hotducks.org/oauth/token{queryString}", httpContent);
-                    //var response = await client.PostAsync($"http://localhost:5000/oauth/token{queryString}", httpContent);
+                    var response = await client.PostAsync($"https://hotducks.org/oauth/token{queryString}", httpContent);                                          //var response = await client.PostAsync($"http://localhost:5000/oauth/token{queryString}", httpContent);
                     var jsonResponse = await response.Content.ReadAsStringAsync();
                     JObject jsonPost = JObject.Parse(jsonResponse);
                     string acces_token = (string)jsonPost["acces_token"];
-                    //response = await client.PostAsync($"http://localhost:5000/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
-                    response = await client.PostAsync($"https://hotducks.org/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
+                    response = await client.PostAsync($"https://hotducks.org/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);                  //response = await client.PostAsync($"http://localhost:5000/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
                     jsonResponse = await response.Content.ReadAsStringAsync();
                     jsonPost = JObject.Parse(jsonResponse);
-                    string surname = (string)(jsonPost["surname"]);
-                    string firstname = (string)(jsonPost["firstname"]);
+                    string surname = (string)jsonPost["surname"];
+                    string firstname = (string)jsonPost["firstname"];
                     TempData["user"] = surname + " "+firstname;
                 }catch { return View(); }
             }

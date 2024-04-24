@@ -40,7 +40,17 @@ namespace KNUAuthWeb.Controllers
                 string token = Request.Cookies["user_token"];
                 if (token != null)
                 {
-                    TempData["viewprofile"] = "viewprofile";
+                    try
+                    {
+                        if (MySQL.checkUserAdmin(connector, token))
+                            @TempData["admin"] = "1";
+                        else
+                            @TempData["admin"] = null;
+                    }
+                    catch { }
+                    string username = MySQL.getUserNameByToken(connector, token);
+                    @TempData["Username"] = username;
+                    @TempData["viewprofile"] = "viewprofile";
                     dbUser user = MySQL.getUserByToken(connector, token);
                     if (user != null)
                     {

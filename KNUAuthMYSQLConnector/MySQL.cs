@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System.Security.Cryptography;
 
 namespace KNUAuthMYSQLConnector
@@ -97,14 +98,14 @@ namespace KNUAuthMYSQLConnector
             conn.CloseAsync();
             return true;
         }
-        public static bool addUser(Connector c, dbUser user, string password)
+        public static bool addUser(Connector c, dbUser user, string password, string status = "user")
         {
             if (c == null) { return false; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"INSERT INTO users (user,password,email,surname,lastname,firstname) VALUES ('{user.user}','{password}','{user.email}','{user.surname}','{user.lastname}','{user.firstname}');";
+            cmd.CommandText = $"INSERT INTO users (user,password,email,surname,lastname,firstname,status) VALUES ('{user.user}','{password}','{user.email}','{user.surname}','{user.lastname}','{user.firstname}','{status}');";
             int count = cmd.ExecuteNonQuery();
             conn.CloseAsync();
             if (count == 0) { return false; }
@@ -292,23 +293,16 @@ namespace KNUAuthMYSQLConnector
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                string username = "", email = "", surname="", firstname="",lastname="";int id = 0; dbUser user = null;
                 try
                 {
-                    username = reader["user"].ToString();
-                    id = int.Parse(reader["id"].ToString());
-                    email = reader["email"].ToString();
-                    surname = reader["surname"].ToString();
-                    firstname = reader["firstname"].ToString();
-                    lastname = reader["lastname"].ToString();
-                    user = new dbUser
+                    dbUser user = new dbUser
                     {
-                        id = id,
-                        email = email,
-                        user = username,
-                        surname = surname,
-                        firstname = firstname,
-                        lastname = lastname
+                        id = int.Parse(reader["id"].ToString()),
+                        email = reader["email"].ToString(),
+                        user = reader["user"].ToString(),
+                        surname = reader["surname"].ToString(),
+                        firstname = reader["firstname"].ToString(),
+                        lastname = reader["lastname"].ToString()
                     };
                     return user;
                 }
@@ -318,6 +312,78 @@ namespace KNUAuthMYSQLConnector
                 }
             }
             return null;
+        }
+        public static List<listUser> adminGetUsers(Connector c, int limit = 10, int startid=1)
+        {
+            if (c == null) { return null; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT id, user, email, surname, firstname, lastname FROM users WHERE id>={startid} LIMIT {limit};";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<listUser> users = new List<listUser>();
+            while(reader.Read())
+            {
+                users.Add(new listUser(
+                        reader.GetInt32("id"),
+                        reader.GetString("user"),
+                        reader.GetString("email"),
+                        reader.GetString("surname"),
+                        reader.GetString("firstname"),
+                        reader.GetString("lastname")
+                    ));
+            }
+            return users;
+        }
+        public static List<listUser> adminGetUserByFilter(Connector c, int? limit = 10, string? user, string? email, string? surname, string? firstname, string? lastname)
+        {
+            if (c == null) { return null; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            int count = 0;
+            string Command = $"SELECT id, user, email, surname, firstname, lastname FROM users WHERE ";
+            if (user != null) { Command += $" user LIKE '%{user}%'"; count++; }
+            if (email != null) { if (count != 0) { Command += " AND "; } Command += $" email LIKE '%{email}%'"; count++; }
+            if (surname != null) { if (count != 0) { Command += " AND "; } Command += $" surname LIKE '%{surname}%'"; count++; }
+            if (firstname != null) { if (count != 0) { Command += " AND "; } Command += $" firstname LIKE '%{firstname}%'"; count++; }
+            if (lastname != null) { if (count != 0) { Command += " AND "; } Command += $" lastname LIKE '%{lastname}%'"; }
+            Command += $" ORDER BY ID ASC LIMIT {limit};";
+            cmd.CommandText = Command;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<listUser> users = new List<listUser>();
+            while (reader.Read())
+            {
+                users.Add(new listUser(
+                        reader.GetInt32("id"),
+                        reader.GetString("user"),
+                        reader.GetString("email"),
+                        reader.GetString("surname"),
+                        reader.GetString("firstname"),
+                        reader.GetString("lastname")
+                    ));
+            }
+            return users;
+        }
+        public static bool checkUserAdmin(Connector c, string token)
+        {
+            if (c == null) { return false; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT U.`status` FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string status = reader["status"].ToString();
+                conn.CloseAsync();
+                if (status == "admin") { return true; }
+                else { return false; }
+            }
+            return false;
         }
 
     }

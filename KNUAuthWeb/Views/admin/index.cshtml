@@ -1,0 +1,72 @@
+﻿@model adminModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Таблица пользователей</title>
+</head>
+<body>
+    @if (@TempData["admin"] != null){
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Логін</th>
+                <th>Email</th>
+                <th>Прізвище</th>
+                <th>Ім'я</th>
+                <th>По-батькові</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(adminModel.Users!=null){
+            @foreach (var user in adminModel.Users)
+            {
+                <tr>
+                    <td>@user.user</td>
+                    <td>@user.email</td>
+                    <td>@user.surname</td>
+                    <td>@user.firstname</td>
+                    <td>@user.lastname</td>
+                    <td><form asp-controller="admin" asp-action="edit" method="get">
+                                <input type="hidden" name="id" value="@user.id" />
+                                <button class="kbutton" type="submit">Редагувати</button>
+                            </form></td>
+                </tr>
+            }
+            }
+            <tr>
+                <form asp-controller="admin" asp-action="index" method="get">
+                <td><input class="input" type="text" id="login" name="login"></td>
+                <td><input class="input" type="text" id="login" name="email"></td>
+                <td><input class="input" type="text" id="login" name="s"></td>
+                <td><input class="input" type="text" id="login" name="f"></td>
+                <td><input class="input" type="text" id="login" name="l"></td>
+                <td><button class="kbutton" type="submit">Пошук</button></td>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+    }else{
+    <h1>Недостатньо прав доступу! </h1>
+    }
+    <style>
+        table {
+            border-collapse: collapse; /* Объединение границ ячеек таблицы */
+            border-radius: 10px; /* Скругление краев таблицы */
+            width: 100%; /* Ширина таблицы */
+        }
+        td{
+            border: 1px solid black; /* Границы ячеек таблицы */
+            padding: 8px; /* Внутренние отступы ячеек таблицы */
+            text-align: left; /* Выравнивание текста в ячейках таблицы */
+        }
+        th {
+            /*border: 1px solid black; /* Границы ячеек таблицы */
+            padding: 8px; /* Внутренние отступы ячеек таблицы */
+            text-align: left; /* Выравнивание текста в ячейках таблицы */
+        }
+
+    </style>
+</body>
+</html>

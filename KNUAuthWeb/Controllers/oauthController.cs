@@ -66,7 +66,7 @@ namespace KNUAuthWeb.Controllers
                     ModelState.AddModelError("Username", $"Допустимі лише a-z,A-Z,0-9 та _");
                     return View(model);
                 }
-                if (Regex.IsMatch(model.RestoreEmail, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"))
+                if (Regex.IsMatch(model.RestoreEmail, @"^[a-zA-Z0-9_.+-]+@(knu\.ua|gmail\.com)+$"))
                 {
                     bool existingEmail = MySQL.checkEmailUnique(connector, model.RestoreEmail);
                     if (!existingEmail)
@@ -74,6 +74,10 @@ namespace KNUAuthWeb.Controllers
                         ModelState.AddModelError("RestoreEmail", $"Цей email вже використаноб спробуйте інший.");
                         return View(model);
                     }
+                }else if(!Regex.IsMatch(model.RestoreEmail, @"^[a-z0-9_.+-]+@(knu\.ua|gmail\.com)+$"))
+                {
+                    ModelState.AddModelError("RestoreEmail", $"Дупустимі символи a-z,0-9,. та _ доменів knu.ua та gmail.com");
+                    return View(model);
                 }
                 if (!Regex.IsMatch(model.FirstName, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
                 {
@@ -149,7 +153,7 @@ namespace KNUAuthWeb.Controllers
             string scope = "", responseUrl = "", state = ""; int client_id = 0;
             var cookieOptions = new CookieOptions
             {
-                Expires = DateTime.Now.AddMinutes(90)
+                Expires = DateTime.Now.AddMinutes(int.Parse(_configuration["cookiesAuthExpTime"]))
             };
             string user_token = MySQL.getActualToken(connector, userId);
             Response.Cookies.Delete("user_token");
@@ -161,6 +165,7 @@ namespace KNUAuthWeb.Controllers
             }
             else
             {
+
                 Response.Cookies.Append("user_token", MySQL.getActualToken(connector, userId), cookieOptions);
             }
             
@@ -215,7 +220,7 @@ namespace KNUAuthWeb.Controllers
             TempData["login.text"] = "Авторизувати";
             var cookieOptions = new CookieOptions
             {
-                Expires = DateTime.Now.AddMinutes(5)
+                Expires = DateTime.Now.AddMinutes(int.Parse(_configuration["cookiesLoginExpTime"]))
             };
             if (Request.Cookies["user_token"] == null)
             {
@@ -280,6 +285,5 @@ namespace KNUAuthWeb.Controllers
             else
             { return Redirect(responseUrl + $"?code={code}"); }
         }
-
     }
 }

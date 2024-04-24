@@ -7,7 +7,7 @@ namespace KNUAuthWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IConfiguration _configuration;
+        public readonly IConfiguration _configuration;
 
         public HomeController(IConfiguration configuration)
         {
@@ -42,6 +42,14 @@ namespace KNUAuthWeb.Controllers
                     string username = MySQL.getUserNameByToken(connector, token);
                     if (username != "IE01")
                     {
+                        try
+                        {
+                            if (MySQL.checkUserAdmin(connector, token))
+                                @TempData["admin"] = "1";
+                            else
+                                @TempData["admin"] = null;
+                        }
+                        catch{ }
                         @TempData["Username"] = username;
                         @TempData["viewprofile"] = "viewprofile";
                         return View();

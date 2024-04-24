@@ -50,19 +50,6 @@
             }
         </tr>
     </table>
-    
-    @if (@TempData["scope"] != null)
-    {
-        <h1>УВАГА!</h1>
-        <div>Буде видано дозвіл на: @TempData["scope"]</div>
-        <br>
-        <br>
-        <br>
-    }
-    else
-    {
-
-    }
     @TempData["Error"]
     
 }
