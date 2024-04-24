@@ -336,7 +336,7 @@ namespace KNUAuthMYSQLConnector
             }
             return users;
         }
-        public static List<listUser> adminGetUserByFilter(Connector c, int? limit = 10, string? user, string? email, string? surname, string? firstname, string? lastname)
+        public static List<listUser> adminGetUserByFilter(Connector c, int? limit, string? user, string? email, string? surname, string? firstname, string? lastname)
         {
             if (c == null) { return null; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";

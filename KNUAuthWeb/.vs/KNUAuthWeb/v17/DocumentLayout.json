@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,21 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|s:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C\\knuauthweb\\controllers\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,24 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MySQL.cs",
-              "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
-              "RelativeDocumentMoniker": "..\\KNUAuthMYSQLConnector\\MySQL.cs",
-              "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
-              "RelativeToolTip": "..\\KNUAuthMYSQLConnector\\MySQL.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAcwLQAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T16:05:46.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "adminModel.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Models\\adminModel.cs",
               "RelativeDocumentMoniker": "Models\\adminModel.cs",
@@ -123,20 +107,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "index.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\admin\\index.cshtml",
               "RelativeDocumentMoniker": "Views\\admin\\index.cshtml",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\admin\\index.cshtml",
               "RelativeToolTip": "Views\\admin\\index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACwAAABNAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-24T13:46:02.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "site.css",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -149,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "login.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\login.cshtml",
@@ -162,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -175,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "grant.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\grant.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\grant.cshtml",
@@ -187,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "meController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\meController.cs",
               "RelativeDocumentMoniker": "Controllers\\meController.cs",
@@ -200,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "profile.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\me\\profile.cshtml",
               "RelativeDocumentMoniker": "Views\\me\\profile.cshtml",
@@ -212,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Token.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Token.cs",
               "RelativeDocumentMoniker": "Token.cs",
@@ -224,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "token.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\token.cs",
               "RelativeDocumentMoniker": "Controllers\\token.cs",
@@ -237,20 +221,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-18T13:27:20.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "OK.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\OK.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\OK.cshtml",
@@ -263,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "homeController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\homeController.cs",
               "RelativeDocumentMoniker": "Controllers\\homeController.cs",
@@ -276,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -289,20 +273,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "oauthController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeDocumentMoniker": "Controllers\\oauthController.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeToolTip": "Controllers\\oauthController.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAcwKEAAAAQAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAowGgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T09:27:15.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -315,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "adminController.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Controllers\\adminController.cs",
               "RelativeDocumentMoniker": "Controllers\\adminController.cs",
@@ -328,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "userModel.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Models\\userModel.cs",
               "RelativeDocumentMoniker": "Models\\userModel.cs",
@@ -341,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -353,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "register.cshtml",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthWeb\\Views\\oauth\\register.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\register.cshtml",
