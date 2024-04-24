@@ -71,7 +71,7 @@ namespace KNUAuthWeb.Controllers
                     bool existingEmail = MySQL.checkEmailUnique(connector, model.RestoreEmail);
                     if (!existingEmail)
                     {
-                        ModelState.AddModelError("RestoreEmail", $"Цей email вже використаноб спробуйте інший.");
+                        ModelState.AddModelError("RestoreEmail", $"Цей email вже використано, спробуйте інший.");
                         return View(model);
                     }
                 }else if(!Regex.IsMatch(model.RestoreEmail, @"^[a-z0-9_.+-]+@(knu\.ua|gmail\.com)+$"))
@@ -79,17 +79,17 @@ namespace KNUAuthWeb.Controllers
                     ModelState.AddModelError("RestoreEmail", $"Дупустимі символи a-z,0-9,. та _ доменів knu.ua та gmail.com");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.FirstName, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
+                if (!Regex.IsMatch(model.FirstName, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
                 {
                     ModelState.AddModelError("FirstName", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.LastName, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
+                if (!Regex.IsMatch(model.LastName, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$Є"))
                 {
                     ModelState.AddModelError("LastName", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.Surname, @"^[А-ЯІЇ]{1}[а-яіїє']+$"))
+                if (!Regex.IsMatch(model.Surname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
                 {
                     ModelState.AddModelError("Surname", $"Допустимі лише А-Я,а-я");
                     return View(model);
@@ -147,7 +147,7 @@ namespace KNUAuthWeb.Controllers
             {
                 ModelState.AddModelError("Password", $"");
                 if(Request.Cookies["scope"] != null) { TempData["scope"] = Request.Cookies["scope"]; }
-                TempData["Error"] = $"Password or username incorrect!";
+                ModelState.AddModelError("Password", $"Невірний логін або пароль.");
                 return View(model);
             }
             string scope = "", responseUrl = "", state = ""; int client_id = 0;
@@ -159,8 +159,8 @@ namespace KNUAuthWeb.Controllers
             Response.Cookies.Delete("user_token");
             if (user_token == "IE01")
             {
-                string tokenNew = token.genToken(userId+"");
-                MySQL.AddTokenB(connector, tokenNew,userId, token.genToken(userId + "1"),999999999,"bearer","admin");
+                string tokenNew = tokenController.genToken(userId+"");
+                MySQL.AddTokenB(connector, tokenNew,userId, tokenController.genToken(userId + "1"),999999999,"bearer","admin");
                 Response.Cookies.Append("user_token", tokenNew, cookieOptions);
             }
             else

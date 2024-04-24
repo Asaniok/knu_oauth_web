@@ -3,6 +3,7 @@ using KNUAuthWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace KNUAuthWeb.Controllers
 {
@@ -62,6 +63,72 @@ namespace KNUAuthWeb.Controllers
             { return Redirect(responseUrl + $"?code={code}&state={state}"); }
             else
             { return Redirect(responseUrl + $"?code={code}"); }
+        }
+        [HttpGet]
+        public IActionResult edit(editModel model, int id)
+        {
+            Connector connector = getConnector();
+            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
+            listUser a = MySQL.adminGetUserById(connector, id);
+            model = new editModel { 
+                id=a.id,
+                user=a.user,
+                surname=a.surname,
+                email=a.email,
+                firstname=a.firstname,
+                lastname=a.lastname,
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult edit(editModel model)
+        {
+            Connector connector = getConnector();
+            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
+            if (model.user.Length > 50)
+            {
+                ModelState.AddModelError("user", $"Max 50 знаків");
+                return View(model);
+            }
+            if (!Regex.IsMatch(model.user, @"^[a-zA-Z0-9_]+$"))
+            {
+                ModelState.AddModelError("user", $"Допустимі лише a-z,A-Z,0-9 та _");
+                return View(model);
+            }
+            if (!Regex.IsMatch(model.email, @"^[a-z0-9_.+-]+@(knu\.ua|gmail\.com)+$"))
+            {
+                ModelState.AddModelError("email", $"Дупустимі символи a-z,0-9,. та _ доменів knu.ua та gmail.com");
+                return View(model);
+            }
+            if (!Regex.IsMatch(model.firstname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
+            {
+                ModelState.AddModelError("firstname", $"Допустимі лише А-Я,а-я");
+                return View(model);
+            }
+            if (!Regex.IsMatch(model.lastname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
+            {
+                ModelState.AddModelError("lastname", $"Допустимі лише А-Я,а-я");
+                return View(model);
+            }
+            if (!Regex.IsMatch(model.surname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
+            {
+                ModelState.AddModelError("surname", $"Допустимі лише А-Я,а-я");
+                return View(model);
+            }
+            dbUser newUser = new dbUser
+            {
+                user = model.user,
+                email = model.email,
+                surname = model.surname,
+                firstname = model.firstname,
+                lastname = model.lastname
+            };
+            if (MySQL.adminEditUserById(connector, newUser, model.id))
+                return RedirectToAction("index","admin", new { id = model.id });
+            else {
+                ModelState.AddModelError("RestoreEmail", $"IE01");
+                return View();
+            }
         }
         private readonly IConfiguration _configuration;
 

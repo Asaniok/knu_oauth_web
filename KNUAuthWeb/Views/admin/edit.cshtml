@@ -1,0 +1,93 @@
+﻿@model KNUAuthWeb.Models.editModel
+
+@{
+    ViewBag.Title = "Редагування профілю";
+}
+
+<h2>Редагування профілю</h2>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    @if (Model != null)
+    {
+        <form asp-controller="admin" asp-action="edit" method="post">
+    <table>
+        <hr style="width:250px">
+        <tr>
+            <div>
+                Логін
+            </div>
+            <div>
+                    @Html.TextBoxFor(m => m.user, htmlAttributes: new { @class = "input" })
+                        @Html.ValidationMessageFor(m => m.user)
+            </div>
+            
+        </tr>
+        <tr>
+        </tr>
+        <hr style="width:250px">
+        <tr>
+            <div>
+                Прізвище
+            </div>
+            <div>
+                        @Html.TextBoxFor(m => m.surname, htmlAttributes: new { @class = "input" })
+                        @Html.ValidationMessageFor(m => m.surname)
+            </div>
+        </tr>
+        <tr>
+            <div>
+                Ім'я
+            </div>
+            <div>
+                        @Html.TextBoxFor(m => m.firstname, htmlAttributes: new { @class = "input" })
+                        @Html.ValidationMessageFor(m => m.firstname)
+            </div>
+        </tr>
+        <tr>
+            <div>
+                По-батькові
+            </div>
+            <div>
+                        @Html.TextBoxFor(m => m.lastname, htmlAttributes: new { @class = "input" })
+                        @Html.ValidationMessageFor(m => m.lastname)
+            </div>
+        </tr>
+        <hr style="width:250px">
+        <tr>
+            <div>
+                Email
+            </div>
+            <div>
+                        @Html.TextBoxFor(m => m.email, htmlAttributes: new { @class = "input", @value = "test" })
+                        @Html.ValidationMessageFor(m => m.email)
+            </div>
+        </tr>
+        <hr style="width:250px">
+    </table>
+            <button class="kbutton" type="submit" style="width:200px;"><img src="~/src/img/gerb3.png" alt="Иконка">Застосувати</button>
+        </form>
+        
+    }
+    else
+    {
+        <form asp-controller="admin" asp-action="edit" method="get">
+        <button class="kbutton" type="submit"><img src="~/src/img/gerb3.png" alt="Иконка">Повернутись</button>
+        </form>
+    }
+
+
+
+
+}

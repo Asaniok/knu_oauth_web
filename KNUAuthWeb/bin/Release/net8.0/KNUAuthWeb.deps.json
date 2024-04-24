@@ -9,7 +9,9 @@
       "KNUAuthWeb/1.0.0": {
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.6",
-          "MySql.Data": "8.3.0"
+          "MySql.Data": "8.3.0",
+          "RestSharp": "110.2.0",
+          "KNUAuthMYSQLConnector": "1.0.0.0"
         },
         "runtime": {
           "KNUAuthWeb.dll": {}
@@ -94,7 +96,7 @@
           "System.Runtime.Loader": "4.3.0",
           "System.Security.Permissions": "4.7.0",
           "System.Text.Encoding.CodePages": "4.4.0",
-          "System.Text.Json": "7.0.1",
+          "System.Text.Json": "7.0.2",
           "System.Threading.Tasks.Extensions": "4.5.4",
           "ZstdSharp.Port": "0.7.1"
         },
@@ -129,6 +131,17 @@
             "rid": "win-x64",
             "assetType": "native",
             "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "RestSharp/110.2.0": {
+        "dependencies": {
+          "System.Text.Json": "7.0.2"
+        },
+        "runtime": {
+          "lib/net7.0/RestSharp.dll": {
+            "assemblyVersion": "110.2.0.0",
+            "fileVersion": "110.2.0.0"
           }
         }
       },
@@ -259,7 +272,7 @@
         }
       },
       "System.Text.Encodings.Web/7.0.0": {},
-      "System.Text.Json/7.0.1": {
+      "System.Text.Json/7.0.2": {
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0"
         }
@@ -296,6 +309,14 @@
           "lib/net7.0/ZstdSharp.dll": {
             "assemblyVersion": "0.7.1.0",
             "fileVersion": "0.7.1.0"
+          }
+        }
+      },
+      "KNUAuthMYSQLConnector/1.0.0.0": {
+        "runtime": {
+          "KNUAuthMYSQLConnector.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -376,6 +397,13 @@
       "sha512": "sha512-bAQlkLYvTYt5MtXAgHGURSBSUWynIvyN2FVQFUg51I2grxsOfnJSyGvO7YsDRnU7IvUNfMdxq8rNXiP5P4hMlw==",
       "path": "mysql.data/8.3.0",
       "hashPath": "mysql.data.8.3.0.nupkg.sha512"
+    },
+    "RestSharp/110.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FXGw0IMcqY7yO/hzS9QrD3iNswNgb9UxJnxWmfOxmGs4kRlZWqdtBoGPLuhlbgsDzX1RFo4WKui8TGGKXWKalw==",
+      "path": "restsharp/110.2.0",
+      "hashPath": "restsharp.110.2.0.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
@@ -503,12 +531,12 @@
       "path": "system.text.encodings.web/7.0.0",
       "hashPath": "system.text.encodings.web.7.0.0.nupkg.sha512"
     },
-    "System.Text.Json/7.0.1": {
+    "System.Text.Json/7.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OtDEmCCiNl8JAduFKZ/r0Sw6XZNHwIicUYy/mXgMDGeOsZLshH37qi3oPRzFYiryVktiMoQLByMGPtRCEMYbeQ==",
-      "path": "system.text.json/7.0.1",
-      "hashPath": "system.text.json.7.0.1.nupkg.sha512"
+      "sha512": "sha512-/LZf/JrGyilojqwpaywb+sSz8Tew7ij4K/Sk+UW8AKfAK7KRhR6mKpKtTm06cYA7bCpGTWfYksIW+mVsdxPegQ==",
+      "path": "system.text.json/7.0.2",
+      "hashPath": "system.text.json.7.0.2.nupkg.sha512"
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
@@ -537,6 +565,11 @@
       "sha512": "sha512-Idgg+mJEyAujqDPzA3APy9dNoyw0YQcNA65GgYjktDRtJ+nvx/hv+J+m6Eax3JJMGEYGy04oc5YNP6ZvQ3Y1vQ==",
       "path": "zstdsharp.port/0.7.1",
       "hashPath": "zstdsharp.port.0.7.1.nupkg.sha512"
+    },
+    "KNUAuthMYSQLConnector/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

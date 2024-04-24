@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kt1md8g+MnodBudzcLtzGuldP9LA05RUHPutbGBfGD8=",
+  "Hash": "fiMm2YzjnikNsIoS4HekU1CO0aC/CBbp/99EiLgnweg=",
   "Source": "KNUAuthWeb",
   "BasePath": "_content/KNUAuthWeb",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "S:\\KNU\\Диплом\\KNUAuthWeb\\wwwroot\\src\\img\\gerb3.png",
+      "SourceId": "KNUAuthWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "S:\\KNU\\Диплом\\KNUAuthWeb\\wwwroot\\",
+      "BasePath": "_content/KNUAuthWeb",
+      "RelativePath": "src/img/gerb3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\img\\gerb3.png"
     }
   ]
 }

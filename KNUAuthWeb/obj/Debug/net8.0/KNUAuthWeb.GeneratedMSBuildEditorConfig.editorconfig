@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = S:\KNU\Диплом\KNUAuthWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[S:/KNU/Диплом/KNUAuthWeb/Views/admin/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [S:/KNU/Диплом/KNUAuthWeb/Views/admin/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

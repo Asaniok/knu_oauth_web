@@ -9,11 +9,11 @@ namespace KNUOAuthApi.Controllers
 {
     [Route("/oauth/[controller]")]
     [ApiController]
-    public class token : ControllerBase
+    public class tokenController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public token(IConfiguration configuration)
+        public tokenController(IConfiguration configuration)
         {
             _configuration = configuration;
         }

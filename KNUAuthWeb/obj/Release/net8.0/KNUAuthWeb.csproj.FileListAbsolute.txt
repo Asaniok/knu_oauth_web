@@ -53,3 +53,6 @@ S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\refint\KNUAuthWeb.dll
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\KNUAuthWeb.pdb
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\KNUAuthWeb.genruntimeconfig.cache
 S:\KNU\Диплом\KNUAuthWeb\obj\Release\net8.0\ref\KNUAuthWeb.dll
+S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\RestSharp.dll
+S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\KNUAuthMYSQLConnector.dll
+S:\KNU\Диплом\KNUAuthWeb\bin\Release\net8.0\KNUAuthMYSQLConnector.pdb

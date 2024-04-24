@@ -367,6 +367,44 @@ namespace KNUAuthMYSQLConnector
             }
             return users;
         }
+        public static listUser adminGetUserById(Connector c, int? id)
+        {
+            if (c == null) { return null; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            string Command = $"SELECT id, user, email, surname, firstname, lastname FROM users WHERE id={id};";
+            cmd.CommandText = Command;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            listUser user = null;
+            while (reader.Read())
+            {
+                user = new listUser(
+                        reader.GetInt32("id"),
+                        reader.GetString("user"),
+                        reader.GetString("email"),
+                        reader.GetString("surname"),
+                        reader.GetString("firstname"),
+                        reader.GetString("lastname")
+                    );
+            }
+            return user;
+        }
+        public static bool adminEditUserById(Connector c, dbUser user, int? id)
+        {
+            if (c == null) { return false; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            string Command = $"UPDATE users SET user='{user.user}', email='{user.email}', surname='{user.email}', firstname='{user.firstname}', lastname='{user.lastname}' WHERE id={id};";
+            cmd.CommandText = Command;
+            int count = cmd.ExecuteNonQuery();
+            conn.CloseAsync();
+            if (count == 0) { return false;}
+            return true;
+        }
         public static bool checkUserAdmin(Connector c, string token)
         {
             if (c == null) { return false; }
