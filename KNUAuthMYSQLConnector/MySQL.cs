@@ -398,7 +398,7 @@ namespace KNUAuthMYSQLConnector
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            string Command = $"UPDATE users SET user='{user.user}', email='{user.email}', surname='{user.email}', firstname='{user.firstname}', lastname='{user.lastname}' WHERE id={id};";
+            string Command = $"UPDATE users SET user='{user.user}', email='{user.email}', surname='{user.surname}', firstname='{user.firstname}', lastname='{user.lastname}' WHERE id={id};";
             cmd.CommandText = Command;
             int count = cmd.ExecuteNonQuery();
             conn.CloseAsync();
