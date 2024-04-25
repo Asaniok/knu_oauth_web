@@ -1,4 +1,4 @@
-﻿using KNUAuthMYSQLConnector;
+using KNUAuthMYSQLConnector;
 using KNUAuthWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
@@ -84,7 +84,7 @@ namespace KNUAuthWeb.Controllers
                     ModelState.AddModelError("FirstName", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.LastName, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$Є"))
+                if (!Regex.IsMatch(model.LastName, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
                 {
                     ModelState.AddModelError("LastName", $"Допустимі лише А-Я,а-я");
                     return View(model);
