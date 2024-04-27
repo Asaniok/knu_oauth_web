@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using System.Net.Http;
@@ -35,7 +35,7 @@ namespace KNUAuthWeb.Controllers
                     var jsonResponse = await response.Content.ReadAsStringAsync();
                     JObject jsonPost = JObject.Parse(jsonResponse);
                     string acces_token = (string)jsonPost["acces_token"];
-                    response = await client.PostAsync($"https://hotducks.org/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);                  //response = await client.PostAsync($"http://localhost:5000/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
+                    response = await client.PostAsync($"https://hotducks.org/profile?oauth_token={acces_token}&method=getInfo", httpContent); //response = await client.PostAsync($"http://localhost:5000/me/profile?oauth_token={acces_token}&method=getInfo", httpContent);
                     jsonResponse = await response.Content.ReadAsStringAsync();
                     jsonPost = JObject.Parse(jsonResponse);
                     string surname = (string)jsonPost["surname"];
