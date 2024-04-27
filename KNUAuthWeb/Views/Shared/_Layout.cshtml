@@ -27,11 +27,11 @@
                             @if (TempData["username"]==null)
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="profile">Профіль</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="profile" asp-action="index">Профіль</a>
                                 </li>
                             }else{
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="me" asp-action="profile">[ @TempData["username"] ]</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="profile" asp-action="index">[ @TempData["username"] ]</a>
                                 </li>
                             }
                             @if (TempData["admin"] != null)

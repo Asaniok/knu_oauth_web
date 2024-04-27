@@ -78,6 +78,12 @@ namespace KNUAuthWeb.Controllers
                 firstname=a.firstname,
                 lastname=a.lastname,
             };
+            ModelState.AddModelError("id", $"");
+            ModelState.AddModelError("user", $"");
+            ModelState.AddModelError("surname", $"");
+            ModelState.AddModelError("email", $"");
+            ModelState.AddModelError("firstname", $"");
+            ModelState.AddModelError("lastname", $"");
             return View(model);
         }
         [HttpPost]
@@ -85,6 +91,28 @@ namespace KNUAuthWeb.Controllers
         {
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
+            try
+            {
+                string token = Request.Cookies["user_token"];
+                if (token != null)
+                {
+                    string username = MySQL.getUserNameByToken(connector, token);
+                    if (username != "IE01")
+                    {
+                        @TempData["Username"] = username;
+                        @TempData["viewprofile"] = "viewprofile";
+                        if (MySQL.checkUserAdmin(connector, token))
+                            @TempData["admin"] = "1";
+                        else
+                        {
+                            @TempData["admin"] = null;
+                            return RedirectToAction("Index", "Home");
+                        }
+
+                    }
+                }
+            }
+            catch { }
             if (model.user.Length > 50)
             {
                 ModelState.AddModelError("user", $"Max 50 знаків");
@@ -129,6 +157,59 @@ namespace KNUAuthWeb.Controllers
                 ModelState.AddModelError("RestoreEmail", $"IE01");
                 return View();
             }
+        }
+        [HttpPost]
+        public IActionResult delete(int id)
+        {
+            Connector connector = getConnector();
+            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
+            string token = "";
+            try
+            {
+                token = Request.Cookies["user_token"];
+                if (token != null)
+                {
+                    string username = MySQL.getUserNameByToken(connector, token);
+                    if (username != "IE01")
+                    {
+                        try
+                        {
+                            if (MySQL.checkUserAdmin(connector, token))
+                                @TempData["admin"] = "1";
+                            else
+                            {
+                                @TempData["admin"] = null;
+                                return RedirectToAction("index", "home");
+                            }
+                                
+                        }
+                        catch { }
+                        @TempData["Username"] = username;
+                        @TempData["viewprofile"] = "viewprofile";
+                    }
+                }
+            }
+            catch { }
+            if (token == "")
+            {
+                return RedirectToAction("index", "home");
+            }
+            dbUser a = MySQL.getUserByToken(connector, token);
+            if (id != 0)
+            {
+                if (MySQL.userDeleteProfile(connector, id))
+                {
+                    return RedirectToAction("index", "admin");
+                }
+            }
+            else
+            {
+                if (MySQL.userDeleteProfile(connector, a.id))
+                {
+                    return RedirectToAction("index", "admin");
+                }
+            }
+            return View();
         }
         private readonly IConfiguration _configuration;
 

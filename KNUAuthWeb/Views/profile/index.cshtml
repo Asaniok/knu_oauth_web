@@ -57,9 +57,31 @@
         
         
         
+        <table>
+            <th>
+                <form method="post" action="@Url.Action("index", "home")">
+                    <button class="kbutton" style="width:90px" type="submit">Вийти</button>
+                </form>
+            </th>
+            <th>
+                <form asp-controller="profile" asp-action="edit" method="get">
+                    <input type="hidden" name="id" value="@TempData["id"]" />
+                    <button class="kbutton" type="submit">Редагувати</button>
+                </form>
+            </th>
+            <td>
+                <form asp-controller="profile" asp-action="password" method="get">
+                    <button class="kbutton" type="submit">Змінити пароль</button>
+                </form>
+            </td>
+            <td>
+                <form method="get" action="@Url.Action("delete", "profile")">
+                    <button class="kbutton" style="width:auto; color:red" type="submit"><b>Видалити</b></button>
+                </form>
+            </td>
+        </table>
         
-        <form method="post" action="@Url.Action("index", "home")">
-              <button class="kbutton" style="width:90px" type="submit">Вийти</button>
-        </form>
+        
+        
     }
 </div>

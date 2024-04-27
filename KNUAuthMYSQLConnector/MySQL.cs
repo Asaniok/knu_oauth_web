@@ -423,6 +423,36 @@ namespace KNUAuthMYSQLConnector
             }
             return false;
         }
-
+        public static bool userUpdatePassword(Connector c, int id, string newPassword)
+        {
+            if (c == null) { return false; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"UPDATE users SET password='{newPassword}' WHERE id={id}; SELECT password FROM users WHERE id={id};";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string password = reader["password"].ToString();
+                conn.CloseAsync();
+                if (password == newPassword) { return true; }
+                else { return false; }
+            }
+            return false;
+        }
+        public static bool userDeleteProfile(Connector c, int id)
+        {
+            if (c == null) { return false; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"DELETE FROM users WHERE id={id};";
+            int count = cmd.ExecuteNonQuery();
+            conn.CloseAsync();
+            if (count == 0) { return false; }
+            return true;
+        }
     }
 }

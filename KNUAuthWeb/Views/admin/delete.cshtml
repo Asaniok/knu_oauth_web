@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Видалення профілю";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <h1>УВАГА!</h1>
+    <h3>Чи підтверджуєте ви видалення профілю?</h3>
+    <table>
+        <th>
+            <form asp-controller="admin" asp-action="delete" method="post">
+                    <button class="kbutton" type="submit" style="width:auto; color:red;"><b>Так</b></button>
+                </form>
+        </th>
+        <th>
+            <form asp-controller="admin" asp-action="index" method="get">
+                <button class="kbutton" type="submit" style="width:auto; color:green;"><b>Ні</b></button>
+            </form>
+        </th>
+    </table> 
+
+
+
+
+}

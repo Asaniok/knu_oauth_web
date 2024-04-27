@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = S:\KNU\Диплом\KNUAuthWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[S:/KNU/Диплом/KNUAuthWeb/Views/admin/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [S:/KNU/Диплом/KNUAuthWeb/Views/admin/edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cZWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [S:/KNU/Диплом/KNUAuthWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[S:/KNU/Диплом/KNUAuthWeb/Views/me/profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbWVccHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [S:/KNU/Диплом/KNUAuthWeb/Views/oauth/grant.cshtml]
@@ -56,6 +56,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [S:/KNU/Диплом/KNUAuthWeb/Views/oauth/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhccmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/KNU/Диплом/KNUAuthWeb/Views/profile/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxkZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/KNU/Диплом/KNUAuthWeb/Views/profile/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/KNU/Диплом/KNUAuthWeb/Views/profile/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/KNU/Диплом/KNUAuthWeb/Views/profile/password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxwYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [S:/KNU/Диплом/KNUAuthWeb/Views/Shared/Error.cshtml]

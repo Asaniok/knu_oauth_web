@@ -29,7 +29,7 @@
                 Логін
             </div>
             <div>
-                    @Html.TextBoxFor(m => m.user, htmlAttributes: new { @class = "input" })
+                        @Html.TextBoxFor(m => m.user, htmlAttributes: new { @class = "input" })
                         @Html.ValidationMessageFor(m => m.user)
             </div>
             
@@ -78,34 +78,24 @@
     </table>
     <table>
         <th>
-                <form asp-controller="admin" asp-action="edit" method="post">
+                <form asp-controller="profile" asp-action="edit" method="post">
                     <button class="kbutton" type="submit" style="width:auto;"><b>Застосувати</b></button>
                 </form>
         </th>
         <th>
-                <form asp-controller="admin" asp-action="index" method="get">
+                <form asp-controller="profile" asp-action="index" method="get">
                     <button class="kbutton" type="submit">Повернутись</button>
-                </form>
-        </th>
-@*         <th>
-                    <form asp-controller="admin" asp-action="password" method="get">
-                        <button class="kbutton" type="submit">Скинути пароль</button>
-                    </form>
-        </th> *@
-        <th>
-                <form asp-controller="admin" asp-action="delete" method="post">
-                    <input type="hidden" name="id" value="@Model.id" />
-                    <button class="kbutton" type="submit" style="color:red"><b>Видалити</b></button>
                 </form>
         </th>
     </table>
         
-       
         
+
+            
     }
     else
     {
-        <form asp-controller="admin" asp-action="index" method="get">
+        <form asp-controller="profile" asp-action="index" method="get">
         <button class="kbutton" type="submit"><img src="~/src/img/gerb3.png" alt="Иконка">Повернутись</button>
         </form>
     }

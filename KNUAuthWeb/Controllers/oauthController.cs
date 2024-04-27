@@ -1,4 +1,4 @@
-using KNUAuthMYSQLConnector;
+﻿using KNUAuthMYSQLConnector;
 using KNUAuthWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
@@ -145,7 +145,6 @@ namespace KNUAuthWeb.Controllers
             int userId = MySQL.checkAuth(connector, model.Username, BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Password + model.Username))).Replace("-", "").ToLower());
             if (userId == 0)
             {
-                ModelState.AddModelError("Password", $"");
                 if(Request.Cookies["scope"] != null) { TempData["scope"] = Request.Cookies["scope"]; }
                 ModelState.AddModelError("Password", $"Невірний логін або пароль.");
                 return View(model);
@@ -248,7 +247,15 @@ namespace KNUAuthWeb.Controllers
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             string scope = Request.Cookies["scope"];
             TempData["viewprofile"] = "viewprofile";
-            TempData["scope"] = scope;
+            if (scope == "getInfo")
+            {
+                TempData["scope"] = "Буде надано доступ до ваших облікових даних: * Логіну, прізвище, ім'я, по-батькові, ваш унікальний ID";
+
+            }
+            else
+            {
+                TempData["scope"] = scope;
+            }
             try
             {
                 string token = Request.Cookies["user_token"];
