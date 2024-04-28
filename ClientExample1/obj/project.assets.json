@@ -149,11 +149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\KNU\\Диплом\\ClientExample1\\ClientExample1.csproj",
+      "projectUniqueName": "X:\\KNU\\Диплом2\\ClientExample1\\ClientExample1.csproj",
       "projectName": "ClientExample1",
-      "projectPath": "S:\\KNU\\Диплом\\ClientExample1\\ClientExample1.csproj",
+      "projectPath": "X:\\KNU\\Диплом2\\ClientExample1\\ClientExample1.csproj",
       "packagesPath": "C:\\Users\\Asaniok\\.nuget\\packages\\",
-      "outputPath": "S:\\KNU\\Диплом\\ClientExample1\\obj\\",
+      "outputPath": "X:\\KNU\\Диплом2\\ClientExample1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asaniok\\AppData\\Roaming\\NuGet\\NuGet.Config",

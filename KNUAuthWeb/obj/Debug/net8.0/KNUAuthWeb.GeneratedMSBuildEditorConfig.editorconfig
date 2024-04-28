@@ -9,87 +9,87 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KNUAuthWeb
 build_property.RootNamespace = KNUAuthWeb
-build_property.ProjectDir = S:\KNU\Диплом\KNUAuthWeb\
+build_property.ProjectDir = X:\KNU\Диплом2\KNUAuthWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = S:\KNU\Диплом\KNUAuthWeb
+build_property.MSBuildProjectDirectory = X:\KNU\Диплом2\KNUAuthWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/admin/delete.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/admin/delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cZGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/admin/edit.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/admin/edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cZWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/admin/index.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/admin/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/Home/Index.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/Home/Privacy.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/oauth/grant.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/oauth/grant.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhcZ3JhbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/oauth/grantConfirm.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/oauth/grantConfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhcZ3JhbnRDb25maXJtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/oauth/login.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/oauth/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhcbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/oauth/OK.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/oauth/OK.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhcT0suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/oauth/register.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/oauth/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb2F1dGhccmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/profile/delete.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/profile/delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxkZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/profile/edit.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/profile/edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxlZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/profile/index.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/profile/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/profile/password.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/profile/password.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZmlsZVxwYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/Shared/Error.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/_ViewImports.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/_ViewStart.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[S:/KNU/Диплом/KNUAuthWeb/Views/Shared/_Layout.cshtml]
+[X:/KNU/Диплом2/KNUAuthWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-woln573eae

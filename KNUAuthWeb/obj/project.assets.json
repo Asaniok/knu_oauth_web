@@ -1917,11 +1917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\KNU\\Диплом\\KNUAuthWeb\\KNUAuthWeb.csproj",
+      "projectUniqueName": "X:\\KNU\\Диплом2\\KNUAuthWeb\\KNUAuthWeb.csproj",
       "projectName": "KNUAuthWeb",
-      "projectPath": "S:\\KNU\\Диплом\\KNUAuthWeb\\KNUAuthWeb.csproj",
+      "projectPath": "X:\\KNU\\Диплом2\\KNUAuthWeb\\KNUAuthWeb.csproj",
       "packagesPath": "C:\\Users\\Asaniok\\.nuget\\packages\\",
-      "outputPath": "S:\\KNU\\Диплом\\KNUAuthWeb\\obj\\",
+      "outputPath": "X:\\KNU\\Диплом2\\KNUAuthWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asaniok\\AppData\\Roaming\\NuGet\\NuGet.Config",

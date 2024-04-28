@@ -114,13 +114,14 @@ namespace KNUAuthWeb.Controllers
             return View(model);
         }
         [HttpGet]
-        public IActionResult edit(editModel model, int id)
+        public IActionResult Edit(editModel model)
         {
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
+            string token = "";
             try
             {
-                string token = Request.Cookies["user_token"];
+                token = Request.Cookies["user_token"];
                 if (token != null)
                 {
                     string username = MySQL.getUserNameByToken(connector, token);
@@ -138,9 +139,13 @@ namespace KNUAuthWeb.Controllers
                         @TempData["viewprofile"] = "viewprofile";
                     }
                 }
+                else
+                {
+                    return RedirectToAction("index", "home");
+                }
             }
             catch { }
-            listUser a = MySQL.adminGetUserById(connector, id);
+            dbUser a = MySQL.getUserByToken(connector, token);
             model = new editModel
             {
                 id = a.id,
@@ -150,10 +155,6 @@ namespace KNUAuthWeb.Controllers
                 firstname = a.firstname,
                 lastname = a.lastname,
             };
-            if (id != model.id)
-            {
-                return RedirectToAction("edit","profile",new { id=a.id});
-            }
             return View(model);
         }
         [HttpPost]

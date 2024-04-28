@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "S:\\KNU\\Диплом\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {}
+    "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {}
   },
   "projects": {
-    "S:\\KNU\\Диплом\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {
+    "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\KNU\\Диплом\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+        "projectUniqueName": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
         "projectName": "KNUAuthMYSQLConnector",
-        "projectPath": "S:\\KNU\\Диплом\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+        "projectPath": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
         "packagesPath": "C:\\Users\\Asaniok\\.nuget\\packages\\",
-        "outputPath": "S:\\KNU\\Диплом\\KNUAuthMYSQLConnector\\obj\\",
+        "outputPath": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asaniok\\AppData\\Roaming\\NuGet\\NuGet.Config",

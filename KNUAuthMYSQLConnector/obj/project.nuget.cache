@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "28TDM5WK7HzLgoSlQLffRKUW17TAh9qCCzfqGQyat48daEmVbre5aFAsX4sScOfd5OORvSA23XCm8IlzmGejpA==",
+  "dgSpecHash": "lBpzxQL8y7G5eHp9oTKSjiigAC6TPZMBUfVWlmLimvFhypiOw3oeo/Zv40bT0eXhRwgSYdaVJt8+xJ6YHQEQPA==",
   "success": true,
-  "projectFilePath": "S:\\KNU\\Диплом\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+  "projectFilePath": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asaniok\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Asaniok\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

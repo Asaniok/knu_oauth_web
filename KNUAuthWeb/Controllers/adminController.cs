@@ -1,5 +1,6 @@
 ﻿using KNUAuthMYSQLConnector;
 using KNUAuthWeb.Models;
+using KNUOAuthApi;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 using System.Text;
@@ -70,6 +71,28 @@ namespace KNUAuthWeb.Controllers
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             listUser a = MySQL.adminGetUserById(connector, id);
+            try
+            {
+                string token = Request.Cookies["user_token"];
+                if (token != null)
+                {
+                    string username = MySQL.getUserNameByToken(connector, token);
+                    if (username != "IE01")
+                    {
+                        try
+                        {
+                            if (MySQL.checkUserAdmin(connector, token))
+                                @TempData["admin"] = "1";
+                            else
+                                @TempData["admin"] = null;
+                        }
+                        catch { }
+                        @TempData["Username"] = username;
+                        @TempData["viewprofile"] = "viewprofile";
+                    }
+                }
+            }
+            catch { }
             model = new editModel { 
                 id=a.id,
                 user=a.user,
