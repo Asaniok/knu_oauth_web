@@ -150,6 +150,10 @@ namespace KNUAuthWeb.Controllers
                 firstname = a.firstname,
                 lastname = a.lastname,
             };
+            if (id != model.id)
+            {
+                return RedirectToAction("edit","profile",new { id=a.id});
+            }
             return View(model);
         }
         [HttpPost]
