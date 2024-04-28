@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eAjkK5fVwLvPh6HhTIDMXUDkVXIv5HV3uSXbHXonPlxgt5SrA7IdINfjagZdWKipMJ+CSY0XI8GYPo5YFR5inw==",
+  "dgSpecHash": "qbbx4w8yVT6tL26k2KQZkDBpgC8aEKKj3cdGCqqndC+YVOcrITli6Xp4ezJVYUhg5PwtCr46xZ0iY4V5kRftYA==",
   "success": true,
-  "projectFilePath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthWeb\\KNUAuthWeb.csproj",
+  "projectFilePath": "F:\\knu_oauth_web\\KNUAuthWeb\\KNUAuthWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asaniok\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Asaniok\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

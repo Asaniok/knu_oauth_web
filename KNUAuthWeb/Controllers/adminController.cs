@@ -95,6 +95,10 @@ namespace KNUAuthWeb.Controllers
                         @TempData["viewprofile"] = "viewprofile";
                     }
                 }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             catch { }
             model = new editModel { 

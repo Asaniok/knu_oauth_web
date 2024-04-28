@@ -1917,11 +1917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthWeb\\KNUAuthWeb.csproj",
+      "projectUniqueName": "F:\\knu_oauth_web\\KNUAuthWeb\\KNUAuthWeb.csproj",
       "projectName": "KNUAuthWeb",
-      "projectPath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthWeb\\KNUAuthWeb.csproj",
+      "projectPath": "F:\\knu_oauth_web\\KNUAuthWeb\\KNUAuthWeb.csproj",
       "packagesPath": "C:\\Users\\Asaniok\\.nuget\\packages\\",
-      "outputPath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthWeb\\obj\\",
+      "outputPath": "F:\\knu_oauth_web\\KNUAuthWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asaniok\\AppData\\Roaming\\NuGet\\NuGet.Config",
