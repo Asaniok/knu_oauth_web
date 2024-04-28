@@ -1791,11 +1791,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+      "projectUniqueName": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
       "projectName": "KNUAuthMYSQLConnector",
-      "projectPath": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+      "projectPath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
       "packagesPath": "C:\\Users\\Asaniok\\.nuget\\packages\\",
-      "outputPath": "X:\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\obj\\",
+      "outputPath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asaniok\\AppData\\Roaming\\NuGet\\NuGet.Config",

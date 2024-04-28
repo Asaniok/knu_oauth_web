@@ -35,6 +35,10 @@ namespace KNUAuthWeb.Controllers
                             
                     }
                 }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             catch { }
             if (login == null & email == null & s == null & f == null & l == null)
@@ -52,7 +56,7 @@ namespace KNUAuthWeb.Controllers
         {
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
-            if (Request.Cookies["user_token"] == null) { return RedirectToAction("Index", "Home"); }
+            if (Request.Cookies["user_token"] == null || MySQL.checkUserAdmin(connector, Request.Cookies["user_token"])==false) { return RedirectToAction("Index", "Home"); }
             string scope = Request.Cookies["scope"], state = Request.Cookies["state"], client_id = Request.Cookies["client_id"], responseUrl = Request.Cookies["responseUrl"];
             string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
             if (!MySQL.addCode(connector, code, 300, scope, int.Parse(client_id), MySQL.getUserByToken(connector, Request.Cookies["user_token"]).id)) { return RedirectToAction("Home"); }
@@ -134,6 +138,10 @@ namespace KNUAuthWeb.Controllers
 
                     }
                 }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             catch { }
             if (model.user.Length > 50)
@@ -210,6 +218,10 @@ namespace KNUAuthWeb.Controllers
                         @TempData["Username"] = username;
                         @TempData["viewprofile"] = "viewprofile";
                     }
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
                 }
             }
             catch { }

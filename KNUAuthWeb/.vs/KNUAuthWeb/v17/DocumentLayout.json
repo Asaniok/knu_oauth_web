@@ -1,125 +1,96 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\",
+  "WorkspaceRootPath": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\profile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\adminmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\oauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\profile\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\newpassmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\newpassmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\newpassmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\grantconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\profile\\password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\profile\\password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\grant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\grant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\grant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\ok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\oauth\\ok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\oauth\\ok.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|x:\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9FE93F9B-3249-454D-9D06-086D80CA5770}|KNUAuthWeb.csproj|\\\\93.171.128.226\\games\\knu\\\u0434\u0438\u043F\u043B\u043E\u043C2\\knuauthweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -129,17 +100,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "profileController.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\profileController.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\profileController.cs",
               "RelativeDocumentMoniker": "Controllers\\profileController.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\profileController.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\profileController.cs",
               "RelativeToolTip": "Controllers\\profileController.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAgwI8AAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAI8AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T21:04:48.457Z",
               "IsPinned": true,
@@ -147,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "adminController.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\adminController.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\adminController.cs",
               "RelativeDocumentMoniker": "Controllers\\adminController.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\adminController.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\adminController.cs",
               "RelativeToolTip": "Controllers\\adminController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAqwEwAAAAiAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwDoAAAB+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T16:09:42.324Z",
               "IsPinned": true,
@@ -161,11 +132,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "oauthController.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\oauthController.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeDocumentMoniker": "Controllers\\oauthController.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\oauthController.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\oauthController.cs",
               "RelativeToolTip": "Controllers\\oauthController.cs",
               "ViewState": "AQIAAOcAAAAAAAAAAAAmwPsAAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -174,11 +145,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "delete.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\delete.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\delete.cshtml",
               "RelativeDocumentMoniker": "Views\\profile\\delete.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\delete.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\delete.cshtml",
               "RelativeToolTip": "Views\\profile\\delete.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -186,24 +157,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "edit.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\edit.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\edit.cshtml",
               "RelativeDocumentMoniker": "Views\\profile\\edit.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\edit.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\edit.cshtml",
               "RelativeToolTip": "Views\\profile\\edit.cshtml",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAFgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-27T14:56:38.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T14:56:38.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "newPassModel.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\newPassModel.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\newPassModel.cs",
               "RelativeDocumentMoniker": "Models\\newPassModel.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\newPassModel.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\newPassModel.cs",
               "RelativeToolTip": "Models\\newPassModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -211,31 +181,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 3,
               "Title": "password.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\password.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\password.cshtml",
               "RelativeDocumentMoniker": "Views\\profile\\password.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\password.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\password.cshtml",
               "RelativeToolTip": "Views\\profile\\password.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-27T14:43:13.404Z"
+              "WhenOpened": "2024-04-27T14:43:13.404Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 4,
               "Title": "grantConfirm.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grantConfirm.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grantConfirm.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\grantConfirm.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grantConfirm.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grantConfirm.cshtml",
               "RelativeToolTip": "Views\\oauth\\grantConfirm.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-24T20:36:58.941Z"
+              "WhenOpened": "2024-04-24T20:36:58.941Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "MySQL.cs",
               "DocumentMoniker": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
               "ToolTip": "S:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C\\KNUAuthMYSQLConnector\\MySQL.cs",
@@ -244,11 +216,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "editModel.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\editModel.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\editModel.cs",
               "RelativeDocumentMoniker": "Models\\editModel.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\editModel.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\editModel.cs",
               "RelativeToolTip": "Models\\editModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -256,11 +228,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "edit.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\edit.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\edit.cshtml",
               "RelativeDocumentMoniker": "Views\\admin\\edit.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\edit.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\edit.cshtml",
               "RelativeToolTip": "Views\\admin\\edit.cshtml",
               "ViewState": "AQIAACQAAAAAAAAAAAAAAFEAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -268,37 +240,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "adminModel.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\adminModel.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\adminModel.cs",
               "RelativeDocumentMoniker": "Models\\adminModel.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\adminModel.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\adminModel.cs",
               "RelativeToolTip": "Models\\adminModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:30:26.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T14:30:26.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "index.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\index.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\index.cshtml",
               "RelativeDocumentMoniker": "Views\\admin\\index.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\index.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\index.cshtml",
               "RelativeToolTip": "Views\\admin\\index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-24T13:46:02.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T13:46:02.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "site.css",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\wwwroot\\css\\site.css",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -306,24 +276,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\appsettings.json",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\appsettings.json",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-22T21:10:25.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T21:10:25.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "index.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\index.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\index.cshtml",
               "RelativeDocumentMoniker": "Views\\profile\\index.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\index.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\profile\\index.cshtml",
               "RelativeToolTip": "Views\\profile\\index.cshtml",
               "ViewState": "AQIAABsAAAAAAAAAAAAAAEIAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -332,11 +301,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
+              "Title": "Token.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Token.cs",
+              "RelativeDocumentMoniker": "Token.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Token.cs",
+              "RelativeToolTip": "Token.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T10:36:44.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\ErrorViewModel.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -344,11 +326,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "delete.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\delete.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\delete.cshtml",
               "RelativeDocumentMoniker": "Views\\admin\\delete.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\delete.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\admin\\delete.cshtml",
               "RelativeToolTip": "Views\\admin\\delete.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -356,11 +338,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "login.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\login.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\login.cshtml",
               "RelativeToolTip": "Views\\oauth\\login.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -368,11 +350,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "grant.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grant.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grant.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\grant.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grant.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\grant.cshtml",
               "RelativeToolTip": "Views\\oauth\\grant.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -380,24 +362,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "tokenController.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\tokenController.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\tokenController.cs",
               "RelativeDocumentMoniker": "Controllers\\tokenController.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\tokenController.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\tokenController.cs",
               "RelativeToolTip": "Controllers\\tokenController.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAgwDYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T18:36:40.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T18:36:40.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -405,11 +386,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "OK.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\OK.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\OK.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\OK.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\OK.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\OK.cshtml",
               "RelativeToolTip": "Views\\oauth\\OK.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -417,11 +398,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "homeController.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\homeController.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\homeController.cs",
               "RelativeDocumentMoniker": "Controllers\\homeController.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\homeController.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Controllers\\homeController.cs",
               "RelativeToolTip": "Controllers\\homeController.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAowCMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -429,11 +410,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Program.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Program.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Program.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -441,11 +422,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -453,11 +434,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "register.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\register.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\register.cshtml",
               "RelativeDocumentMoniker": "Views\\oauth\\register.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\register.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\oauth\\register.cshtml",
               "RelativeToolTip": "Views\\oauth\\register.cshtml",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAADMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -465,23 +446,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Token.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Token.cs",
-              "RelativeDocumentMoniker": "Token.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Token.cs",
-              "RelativeToolTip": "Token.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T10:36:44.261Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "userModel.cs",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\userModel.cs",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\userModel.cs",
               "RelativeDocumentMoniker": "Models\\userModel.cs",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\userModel.cs",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Models\\userModel.cs",
               "RelativeToolTip": "Models\\userModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -491,9 +460,9 @@
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "Privacy.cshtml",
-              "DocumentMoniker": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Privacy.cshtml",
+              "DocumentMoniker": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "X:\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "\\\\93.171.128.226\\Games\\KNU\\\u0414\u0438\u043F\u043B\u043E\u043C2\\KNUAuthWeb\\Views\\Home\\Privacy.cshtml",
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
