@@ -215,7 +215,7 @@ namespace KNUAuthWeb.Controllers
                 return View(model);
             }
             dbUser newUser = new dbUser
-            (0,
+            (model.id,
                 model.user,
                 model.email,
                 model.surname,
