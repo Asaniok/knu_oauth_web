@@ -295,15 +295,14 @@ namespace KNUAuthMYSQLConnector
             {
                 try
                 {
-                    dbUser user = new dbUser
-                    {
-                        id = int.Parse(reader["id"].ToString()),
-                        email = reader["email"].ToString(),
-                        user = reader["user"].ToString(),
-                        surname = reader["surname"].ToString(),
-                        firstname = reader["firstname"].ToString(),
-                        middlename = reader["middlename"].ToString()
-                    };
+                    dbUser user = new dbUser(
+                        int.Parse(reader["id"].ToString()),
+                        reader["user"].ToString(),
+                        reader["email"].ToString(),
+                        reader["surname"].ToString(),
+                        reader["firstname"].ToString(),
+                        reader["middlename"].ToString()
+                    );
                     return user;
                 }
                 catch
@@ -313,7 +312,7 @@ namespace KNUAuthMYSQLConnector
             }
             return null;
         }
-        public static List<listUser> adminGetUsers(Connector c, int limit = 10, int startid=1)
+        public static List<dbUser> adminGetUsers(Connector c, int limit = 10, int startid=1)
         {
             if (c == null) { return null; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
@@ -322,10 +321,10 @@ namespace KNUAuthMYSQLConnector
             var cmd = conn.CreateCommand();
             cmd.CommandText = $"SELECT id, user, email, surname, firstname, middlename FROM users WHERE id>={startid} LIMIT {limit};";
             MySqlDataReader reader = cmd.ExecuteReader();
-            List<listUser> users = new List<listUser>();
+            List<dbUser> users = new List<dbUser>();
             while(reader.Read())
             {
-                users.Add(new listUser(
+                users.Add(new dbUser(
                         reader.GetInt32("id"),
                         reader.GetString("user"),
                         reader.GetString("email"),
@@ -336,7 +335,7 @@ namespace KNUAuthMYSQLConnector
             }
             return users;
         }
-        public static List<listUser> adminGetUserByFilter(Connector c, int? limit, string? user, string? email, string? surname, string? firstname, string? middlename)
+        public static List<dbUser> adminGetUserByFilter(Connector c, int? limit, string? user, string? email, string? surname, string? firstname, string? middlename)
         {
             if (c == null) { return null; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
@@ -353,10 +352,10 @@ namespace KNUAuthMYSQLConnector
             Command += $" ORDER BY ID ASC LIMIT {limit};";
             cmd.CommandText = Command;
             MySqlDataReader reader = cmd.ExecuteReader();
-            List<listUser> users = new List<listUser>();
+            List<dbUser> users = new List<dbUser>();
             while (reader.Read())
             {
-                users.Add(new listUser(
+                users.Add(new dbUser(
                         reader.GetInt32("id"),
                         reader.GetString("user"),
                         reader.GetString("email"),
@@ -367,7 +366,7 @@ namespace KNUAuthMYSQLConnector
             }
             return users;
         }
-        public static listUser adminGetUserById(Connector c, int? id)
+        public static dbUser adminGetUserById(Connector c, int? id)
         {
             if (c == null) { return null; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
@@ -377,10 +376,10 @@ namespace KNUAuthMYSQLConnector
             string Command = $"SELECT id, user, email, surname, firstname, middlename FROM users WHERE id={id};";
             cmd.CommandText = Command;
             MySqlDataReader reader = cmd.ExecuteReader();
-            listUser user = null;
+            dbUser user = null;
             while (reader.Read())
             {
-                user = new listUser(
+                user = new dbUser(
                         reader.GetInt32("id"),
                         reader.GetString("user"),
                         reader.GetString("email"),

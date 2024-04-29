@@ -74,7 +74,7 @@ namespace KNUAuthWeb.Controllers
         {
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
-            listUser a = MySQL.adminGetUserById(connector, id);
+            dbUser a = MySQL.adminGetUserById(connector, id);
             try
             {
                 string token = Request.Cookies["user_token"];
@@ -179,13 +179,13 @@ namespace KNUAuthWeb.Controllers
                 return View(model);
             }
             dbUser newUser = new dbUser
-            {
-                user = model.user,
-                email = model.email,
-                surname = model.surname,
-                firstname = model.firstname,
-                middlename = model.middlename
-            };
+            (0,
+                model.user,
+                model.email,
+                model.surname,
+                model.firstname,
+                model.middlename
+            );
             if (MySQL.adminEditUserById(connector, newUser, model.id))
                 return RedirectToAction("index","admin", new { id = model.id });
             else {

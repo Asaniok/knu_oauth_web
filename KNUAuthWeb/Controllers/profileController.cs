@@ -215,13 +215,13 @@ namespace KNUAuthWeb.Controllers
                 return View(model);
             }
             dbUser newUser = new dbUser
-            {
-                user = model.user,
-                email = model.email,
-                surname = model.surname,
-                firstname = model.firstname,
-                middlename = model.middlename
-            };
+            (0,
+                model.user,
+                model.email,
+                model.surname,
+                model.firstname,
+                model.middlename
+            );
             if (MySQL.adminEditUserById(connector, newUser, model.id))
                 return RedirectToAction("index", "profile");
             else

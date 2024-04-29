@@ -94,14 +94,13 @@ namespace KNUAuthWeb.Controllers
                     ModelState.AddModelError("Surname", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                newUser = new dbUser
-                {
-                    user = model.Username,
-                    email = model.RestoreEmail,
-                    surname = model.Surname,
-                    firstname = model.FirstName,
-                    middlename = model.middlename
-                };
+                newUser = new dbUser(0,
+                    model.Username,
+                    model.RestoreEmail,
+                    model.Surname,
+                    model.FirstName,
+                    model.middlename
+                );
                 MySQL.addUser(connector,newUser, BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Password+model.Username))).Replace("-", "").ToLower());
                 return RedirectToAction("login");
             }
