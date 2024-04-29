@@ -247,15 +247,7 @@ namespace KNUAuthWeb.Controllers
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
             string scope = Request.Cookies["scope"];
             TempData["viewprofile"] = "viewprofile";
-            if (scope == "getInfo")
-            {
-                TempData["scope"] = "Буде надано доступ до ваших облікових даних: * Логіну, прізвище, ім'я, по-батькові, ваш унікальний ID";
-
-            }
-            else
-            {
-                TempData["scope"] = scope;
-            }
+            
             try
             {
                 string token = Request.Cookies["user_token"];
@@ -269,8 +261,21 @@ namespace KNUAuthWeb.Controllers
                         return View();
                     }
                 }
+                else if(token == null || Request.Cookies["responseUrl"]==null) 
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             catch { }
+            if (scope == "getInfo")
+            {
+                TempData["scope"] = "Буде надано доступ до ваших облікових даних: * Логіну, прізвище, ім'я, по-батькові, ваш унікальний ID";
+
+            }
+            else
+            {
+                TempData["scope"] = scope;
+            }
 
             return View();
         }
@@ -279,7 +284,7 @@ namespace KNUAuthWeb.Controllers
         {
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
-            if (Request.Cookies["user_token"]==null || Request.Cookies["responseUrl"] == null) { return RedirectToAction("Index","Home"); }
+            if (Request.Cookies["user_token"]==null) { return RedirectToAction("Index","Home"); }
             string scope = Request.Cookies["scope"], state = Request.Cookies["state"], client_id = Request.Cookies["client_id"], responseUrl = Request.Cookies["responseUrl"];
             string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
             if (!MySQL.addCode(connector, code, 300, scope, int.Parse(client_id), MySQL.getUserByToken(connector,Request.Cookies["user_token"]).id)) { return RedirectToAction("Home"); }
