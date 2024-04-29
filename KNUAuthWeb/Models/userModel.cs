@@ -14,7 +14,7 @@ namespace KNUAuthWeb.Models
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Поле не повинно бути порожнім!")]
-        public string LastName { get; set; }
+        public string middlename { get; set; }
         [Required(ErrorMessage = "Поле не повинно бути порожнім!")]
         public string Surname { get; set; }
 

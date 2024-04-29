@@ -22,3 +22,15 @@ S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector
 S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\refint\KNUAuthMYSQLConnector.dll
 S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.pdb
 S:\KNU\Диплом\KNUAuthMYSQLConnector\obj\Debug\net8.0\ref\KNUAuthMYSQLConnector.dll
+F:\knu_oauth_web\KNUAuthMYSQLConnector\bin\Debug\net8.0\KNUAuthMYSQLConnector.deps.json
+F:\knu_oauth_web\KNUAuthMYSQLConnector\bin\Debug\net8.0\KNUAuthMYSQLConnector.dll
+F:\knu_oauth_web\KNUAuthMYSQLConnector\bin\Debug\net8.0\KNUAuthMYSQLConnector.pdb
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.csproj.AssemblyReference.cache
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.GeneratedMSBuildEditorConfig.editorconfig
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.AssemblyInfoInputs.cache
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.AssemblyInfo.cs
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.csproj.CoreCompileInputs.cache
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.dll
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\refint\KNUAuthMYSQLConnector.dll
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\KNUAuthMYSQLConnector.pdb
+F:\knu_oauth_web\KNUAuthMYSQLConnector\obj\Debug\net8.0\ref\KNUAuthMYSQLConnector.dll

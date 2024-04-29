@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KNUAuthWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6eb92fcfaab7dbe2d125c9e02d800f79c028cee1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f280eeda5e9a7c0bb1f2dac80cdf6043b0bf63f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("KNUAuthWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KNUAuthWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

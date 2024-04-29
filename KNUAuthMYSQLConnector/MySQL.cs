@@ -105,7 +105,7 @@ namespace KNUAuthMYSQLConnector
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"INSERT INTO users (user,password,email,surname,lastname,firstname,status) VALUES ('{user.user}','{password}','{user.email}','{user.surname}','{user.lastname}','{user.firstname}','{status}');";
+            cmd.CommandText = $"INSERT INTO users (user,password,email,surname,middlename,firstname,status) VALUES ('{user.user}','{password}','{user.email}','{user.surname}','{user.middlename}','{user.firstname}','{status}');";
             int count = cmd.ExecuteNonQuery();
             conn.CloseAsync();
             if (count == 0) { return false; }
@@ -287,9 +287,9 @@ namespace KNUAuthMYSQLConnector
             conn.Open();
             var cmd = conn.CreateCommand();
             if(access!=null)
-                cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.lastname,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id AND T.scope='{access}';";
+                cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.middlename,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id AND T.scope='{access}';";
             else
-                cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.lastname,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
+                cmd.CommandText = $"SELECT U.`user`,U.id,U.email,U.surname,U.middlename,U.firstname FROM tokens AS T, users AS U WHERE T.token= '{token}' AND T.`user`=U.id;";
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
@@ -302,7 +302,7 @@ namespace KNUAuthMYSQLConnector
                         user = reader["user"].ToString(),
                         surname = reader["surname"].ToString(),
                         firstname = reader["firstname"].ToString(),
-                        lastname = reader["lastname"].ToString()
+                        middlename = reader["middlename"].ToString()
                     };
                     return user;
                 }
@@ -320,7 +320,7 @@ namespace KNUAuthMYSQLConnector
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"SELECT id, user, email, surname, firstname, lastname FROM users WHERE id>={startid} LIMIT {limit};";
+            cmd.CommandText = $"SELECT id, user, email, surname, firstname, middlename FROM users WHERE id>={startid} LIMIT {limit};";
             MySqlDataReader reader = cmd.ExecuteReader();
             List<listUser> users = new List<listUser>();
             while(reader.Read())
@@ -331,12 +331,12 @@ namespace KNUAuthMYSQLConnector
                         reader.GetString("email"),
                         reader.GetString("surname"),
                         reader.GetString("firstname"),
-                        reader.GetString("lastname")
+                        reader.GetString("middlename")
                     ));
             }
             return users;
         }
-        public static List<listUser> adminGetUserByFilter(Connector c, int? limit, string? user, string? email, string? surname, string? firstname, string? lastname)
+        public static List<listUser> adminGetUserByFilter(Connector c, int? limit, string? user, string? email, string? surname, string? firstname, string? middlename)
         {
             if (c == null) { return null; }
             string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
@@ -344,12 +344,12 @@ namespace KNUAuthMYSQLConnector
             conn.Open();
             var cmd = conn.CreateCommand();
             int count = 0;
-            string Command = $"SELECT id, user, email, surname, firstname, lastname FROM users WHERE ";
+            string Command = $"SELECT id, user, email, surname, firstname, middlename FROM users WHERE ";
             if (user != null) { Command += $" user LIKE '%{user}%'"; count++; }
             if (email != null) { if (count != 0) { Command += " AND "; } Command += $" email LIKE '%{email}%'"; count++; }
             if (surname != null) { if (count != 0) { Command += " AND "; } Command += $" surname LIKE '%{surname}%'"; count++; }
             if (firstname != null) { if (count != 0) { Command += " AND "; } Command += $" firstname LIKE '%{firstname}%'"; count++; }
-            if (lastname != null) { if (count != 0) { Command += " AND "; } Command += $" lastname LIKE '%{lastname}%'"; }
+            if (middlename != null) { if (count != 0) { Command += " AND "; } Command += $" middlename LIKE '%{middlename}%'"; }
             Command += $" ORDER BY ID ASC LIMIT {limit};";
             cmd.CommandText = Command;
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -362,7 +362,7 @@ namespace KNUAuthMYSQLConnector
                         reader.GetString("email"),
                         reader.GetString("surname"),
                         reader.GetString("firstname"),
-                        reader.GetString("lastname")
+                        reader.GetString("middlename")
                     ));
             }
             return users;
@@ -374,7 +374,7 @@ namespace KNUAuthMYSQLConnector
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            string Command = $"SELECT id, user, email, surname, firstname, lastname FROM users WHERE id={id};";
+            string Command = $"SELECT id, user, email, surname, firstname, middlename FROM users WHERE id={id};";
             cmd.CommandText = Command;
             MySqlDataReader reader = cmd.ExecuteReader();
             listUser user = null;
@@ -386,7 +386,7 @@ namespace KNUAuthMYSQLConnector
                         reader.GetString("email"),
                         reader.GetString("surname"),
                         reader.GetString("firstname"),
-                        reader.GetString("lastname")
+                        reader.GetString("middlename")
                     );
             }
             return user;
@@ -398,7 +398,7 @@ namespace KNUAuthMYSQLConnector
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             var cmd = conn.CreateCommand();
-            string Command = $"UPDATE users SET user='{user.user}', email='{user.email}', surname='{user.surname}', firstname='{user.firstname}', lastname='{user.lastname}' WHERE id={id};";
+            string Command = $"UPDATE users SET user='{user.user}', email='{user.email}', surname='{user.surname}', firstname='{user.firstname}', middlename='{user.middlename}' WHERE id={id};";
             cmd.CommandText = Command;
             int count = cmd.ExecuteNonQuery();
             conn.CloseAsync();

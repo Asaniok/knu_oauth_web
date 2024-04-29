@@ -9,7 +9,7 @@ namespace KNUAuthWeb.Models
         public string email { get; set; }
         public string surname { get; set; }
         public string firstname { get; set; }
-        public string lastname { get; set; }
+        public string middlename { get; set; }
 
     }
     

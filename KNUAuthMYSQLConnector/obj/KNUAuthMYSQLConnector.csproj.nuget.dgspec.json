@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {}
+    "F:\\knu_oauth_web\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {}
   },
   "projects": {
-    "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {
+    "F:\\knu_oauth_web\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+        "projectUniqueName": "F:\\knu_oauth_web\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
         "projectName": "KNUAuthMYSQLConnector",
-        "projectPath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
+        "projectPath": "F:\\knu_oauth_web\\KNUAuthMYSQLConnector\\KNUAuthMYSQLConnector.csproj",
         "packagesPath": "C:\\Users\\Asaniok\\.nuget\\packages\\",
-        "outputPath": "\\\\93.171.128.226\\Games\\KNU\\Диплом2\\KNUAuthMYSQLConnector\\obj\\",
+        "outputPath": "F:\\knu_oauth_web\\KNUAuthMYSQLConnector\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asaniok\\AppData\\Roaming\\NuGet\\NuGet.Config",

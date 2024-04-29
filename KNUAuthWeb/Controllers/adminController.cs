@@ -107,14 +107,14 @@ namespace KNUAuthWeb.Controllers
                 surname=a.surname,
                 email=a.email,
                 firstname=a.firstname,
-                lastname=a.lastname,
+                middlename=a.middlename,
             };
             ModelState.AddModelError("id", $"");
             ModelState.AddModelError("user", $"");
             ModelState.AddModelError("surname", $"");
             ModelState.AddModelError("email", $"");
             ModelState.AddModelError("firstname", $"");
-            ModelState.AddModelError("lastname", $"");
+            ModelState.AddModelError("middlename", $"");
             return View(model);
         }
         [HttpPost]
@@ -168,9 +168,9 @@ namespace KNUAuthWeb.Controllers
                 ModelState.AddModelError("firstname", $"Допустимі лише А-Я,а-я");
                 return View(model);
             }
-            if (!Regex.IsMatch(model.lastname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
+            if (!Regex.IsMatch(model.middlename, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
             {
-                ModelState.AddModelError("lastname", $"Допустимі лише А-Я,а-я");
+                ModelState.AddModelError("middlename", $"Допустимі лише А-Я,а-я");
                 return View(model);
             }
             if (!Regex.IsMatch(model.surname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
@@ -184,7 +184,7 @@ namespace KNUAuthWeb.Controllers
                 email = model.email,
                 surname = model.surname,
                 firstname = model.firstname,
-                lastname = model.lastname
+                middlename = model.middlename
             };
             if (MySQL.adminEditUserById(connector, newUser, model.id))
                 return RedirectToAction("index","admin", new { id = model.id });

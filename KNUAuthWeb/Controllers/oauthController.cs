@@ -84,9 +84,9 @@ namespace KNUAuthWeb.Controllers
                     ModelState.AddModelError("FirstName", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
-                if (!Regex.IsMatch(model.LastName, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
+                if (!Regex.IsMatch(model.middlename, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
                 {
-                    ModelState.AddModelError("LastName", $"Допустимі лише А-Я,а-я");
+                    ModelState.AddModelError("middlename", $"Допустимі лише А-Я,а-я");
                     return View(model);
                 }
                 if (!Regex.IsMatch(model.Surname, @"^[А-ЯІЇЄ]{1}[а-яіїє']+$"))
@@ -100,7 +100,7 @@ namespace KNUAuthWeb.Controllers
                     email = model.RestoreEmail,
                     surname = model.Surname,
                     firstname = model.FirstName,
-                    lastname = model.LastName
+                    middlename = model.middlename
                 };
                 MySQL.addUser(connector,newUser, BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Password+model.Username))).Replace("-", "").ToLower());
                 return RedirectToAction("login");

@@ -13,15 +13,15 @@ namespace KNUAuthMYSQLConnector
         public string email { get; set; }
         public string surname { get; set; }
         public string firstname { get; set; }
-        public string lastname { get; set; }
-        public listUser(int Id, string User, string Email, string Surname, string Firstname, string Lastname)
+        public string middlename { get; set; }
+        public listUser(int Id, string User, string Email, string Surname, string Firstname, string middlename)
         {
             id = Id;
             user = User;
             email = Email;
             surname = Surname;
             firstname = Firstname;
-            lastname = Lastname;
+            middlename = middlename;
         }
     }
     
