@@ -261,7 +261,7 @@ namespace KNUAuthWeb.Controllers
                         return View();
                     }
                 }
-                else if(token == null || Request.Cookies["responseUrl"]==null) 
+                if(Request.Cookies["responseUrl"]==null) 
                 {
                     return RedirectToAction("Index", "Home");
                 }
