@@ -14,14 +14,14 @@ namespace KNUAuthMYSQLConnector
         public string surname { get; set; }
         public string firstname { get; set; }
         public string middlename { get; set; }
-        public listUser(int Id, string User, string Email, string Surname, string Firstname, string middlename)
+        public listUser(int Id, string User, string Email, string Surname, string Firstname, string Middlename)
         {
             id = Id;
             user = User;
             email = Email;
             surname = Surname;
             firstname = Firstname;
-            middlename = middlename;
+            middlename = Middlename;
         }
     }
     
