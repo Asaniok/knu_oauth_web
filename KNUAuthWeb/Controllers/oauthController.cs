@@ -258,7 +258,6 @@ namespace KNUAuthWeb.Controllers
                     {
                         TempData["Username"] = username;
                         TempData["viewprofile"] = "viewprofile";
-                        return View();
                     }
                 }
                 if(Request.Cookies["responseUrl"]==null) 
