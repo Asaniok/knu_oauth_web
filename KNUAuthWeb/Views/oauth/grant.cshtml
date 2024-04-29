@@ -2,17 +2,23 @@
     ViewData["Title"] = "Надати доступ";
 }
 
-@using (Html.BeginForm(FormMethod.Post))
-{
+
     <div>
         <h3>Увага!</h3><br>
         <hr style="width:250px">
-        <h6>Буде надано наступний дозвіл:</h6> @TempData["scope"]
+        <h6>Буде надано наступний дозвіл:</h6><br> @TempData["scope"]
         <br>
         <hr style="width:250px">
-        <button class="kbutton" type="submit">Надати</button>
-        <form method="get" action="@Url.Action("index", "profile")">
-            <button type="submit">Не надавати</button>
-        </form>
+        <table>
+        <th>
+            <form method="post" action="@Url.Action("grant", "oauth")" class="kbutton">
+                <button class="kbutton" type="submit">Надати</button>
+            </form>
+        </th>
+        <th>
+            <form method="get" action="@Url.Action("index", "profile")" class="kbutton">
+                <button type="submit">Не надавати</button>
+            </form>
+        </th>
+        </table>
     </div>
-}
