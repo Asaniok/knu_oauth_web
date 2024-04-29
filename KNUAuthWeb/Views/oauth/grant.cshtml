@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "View Profile";
+    ViewData["Title"] = "Надати доступ";
 }
 
 @using (Html.BeginForm(FormMethod.Post))
@@ -11,17 +11,8 @@
         <br>
         <hr style="width:250px">
         <button class="kbutton" type="submit">Надати</button>
+        <form method="get" action="@Url.Action("index", "profile")">
+            <button type="submit">Не надавати</button>
+        </form>
     </div>
 }
-@* <div class="text-center">
-    @if (TempData["id"] == null)
-    {
-        <a class="nav-link text-dark" asp-area="" asp-controller="oauth" asp-action="login">[ Авторизуватись ]</a>
-    }
-    else
-    {
-        <form method="post" action="@Url.Action("index", "home")">
-            <button type="submit">Вийти</button>
-        </form>
-    }
-</div> *@

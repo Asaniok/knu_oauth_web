@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text;
 using KNUAuthMYSQLConnector;
+using KNUAuthWeb.Models;
 
 
 namespace KNUOAuthApi.Controllers
