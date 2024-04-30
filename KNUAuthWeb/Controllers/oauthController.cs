@@ -26,6 +26,7 @@ namespace KNUAuthWeb.Controllers
             connector.server = _configuration["server"];
             return connector;
         }
+        [HttpGet]
         public ActionResult register()
         {
             try
