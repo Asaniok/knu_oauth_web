@@ -28,46 +28,6 @@ namespace KNUOAuthApi.Controllers
             connector.server = _configuration["server"];
             return connector;
         }
-        [HttpGet]
-        public IActionResult Authorize()
-        {
-            Connector connector = getConnector();
-            if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
-            Response.Cookies.Delete("client_id");
-            Response.Cookies.Delete("responseUrl");
-            Response.Cookies.Delete("state");
-            Response.Cookies.Delete("scope");
-            string rType = ""; string rUrl = ""; string scope = ""; string state = ""; int cID = 0;
-            if (HttpContext.Request.Query.ContainsKey("response_type")) { rType = HttpContext.Request.Query["response_type"]; if (rType == null) { return StatusCode(500, "Error: response_type is Empty!"); } }
-            if (HttpContext.Request.Query.ContainsKey("client_id")) { cID = int.Parse(HttpContext.Request.Query["client_id"]); if (cID == 0) { return StatusCode(500, "Error: client_id is Empty!"); } }
-            if (HttpContext.Request.Query.ContainsKey("redirect_uri")) { rUrl = HttpContext.Request.Query["redirect_uri"]; if (rUrl == null) { return StatusCode(500, "Error: redirect_uri is Empty!"); } }
-            if (HttpContext.Request.Query.ContainsKey("scope")) { scope = HttpContext.Request.Query["scope"]; if (scope == null) { return StatusCode(500, "Error: scope is Empty!"); } }
-            if (HttpContext.Request.Query.ContainsKey("state")) { state = HttpContext.Request.Query["state"]; }
-            bool check = MySQL.checkClient(connector, cID);
-            if (!check) { return RedirectToAction("Home"); }
-            var cookieOptions = new CookieOptions
-            {
-                Expires = DateTime.Now.AddMinutes(int.Parse(_configuration["cookiesLoginExpTime"]))
-            };
-            if (Request.Cookies["user_token"] == null)
-            {
-                Response.Cookies.Append("client_id", $"{cID}", cookieOptions);
-                Response.Cookies.Append("responseUrl", $"{rUrl}", cookieOptions);
-                Response.Cookies.Append("state", $"{state}", cookieOptions);
-                Response.Cookies.Append("scope", $"{scope}", cookieOptions);
-                return RedirectToAction("login");
-            }
-            else
-            {
-                Response.Cookies.Append("client_id", $"{cID}", cookieOptions);
-                Response.Cookies.Append("responseUrl", $"{rUrl}", cookieOptions);
-                Response.Cookies.Append("state", $"{state}", cookieOptions);
-                Response.Cookies.Append("scope", $"{scope}", cookieOptions);
-                return RedirectToAction("grant");
-            }
-
-
-        }
         [HttpPost]
         public IActionResult Post(
             )
