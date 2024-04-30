@@ -28,6 +28,15 @@ namespace KNUAuthWeb.Controllers
         }
         public ActionResult register()
         {
+            try
+            {
+                string token = Request.Cookies["user_token"];
+                if (token != null)
+                {
+                    return RedirectToAction("index", "profile");
+                }
+            }
+            catch { }
             Response.Cookies.Delete("client_id");
             Response.Cookies.Delete("responseUrl");
             Response.Cookies.Delete("state");
@@ -111,27 +120,16 @@ namespace KNUAuthWeb.Controllers
         {
 
             string scope = Request.Cookies["scope"];
-            if (scope != null & Request.Cookies["user_token"] == null)
-            {
-                TempData["viewprofile"] = null;
+            Response.Cookies.Delete("client_id");
+            Response.Cookies.Delete("responseUrl");
+            Response.Cookies.Delete("state");
+            Response.Cookies.Delete("scope");
+            TempData["login.text"] = "Увійти";
+            TempData["viewprofile"] = null;
+            if(scope != null)
                 TempData["scope"] = scope;
-                TempData["login.text"] = "Авторизувати";
-            }
-            else if (Request.Cookies["user_token"]!=null & scope != null)
-            {
-                Response.Cookies.Delete("client_id");
-                Response.Cookies.Delete("responseUrl");
-                Response.Cookies.Delete("state");
-                Response.Cookies.Delete("scope");
-                TempData["login.text"] = "Увійти";
-                TempData["viewprofile"] = null;
-                TempData["scope"] = scope;
-            }
             else
-            {
-                TempData["login.text"] = "Увійти";
-                TempData["scope"] = null;
-            }
+                TempData["scope"] = "Буде надано доступ до ПІБ, email та ID";
 
             return View();
         }
@@ -179,12 +177,6 @@ namespace KNUAuthWeb.Controllers
                 return RedirectToAction("Index","Home");
             }
             return RedirectToAction("grant");
-            //string code = BitConverter.ToString(SHA512.Create().ComputeHash(Encoding.UTF8.GetBytes(model.Username + scope + client_id + DateTime.Now.Ticks))).Replace("-", "").ToLower().Substring(0, 16);
-            //if (!MySQL.addCode(connector, code, 300, scope, client_id, userId)) { return RedirectToAction("Home"); }
-            //if (state != null)
-            //{ return Redirect(responseUrl + $"?code={code}&state={state}"); }
-            //else
-            //{ return Redirect(responseUrl + $"?code={code}"); }
         }
         [HttpGet]
         public IActionResult OK()
