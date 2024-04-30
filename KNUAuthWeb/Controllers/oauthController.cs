@@ -120,14 +120,20 @@ namespace KNUAuthWeb.Controllers
         {
 
             string scope = Request.Cookies["scope"];
-            Response.Cookies.Delete("client_id");
-            Response.Cookies.Delete("responseUrl");
-            Response.Cookies.Delete("state");
-            Response.Cookies.Delete("scope");
+            
             TempData["login.text"] = "Увійти";
             TempData["viewprofile"] = null;
-            if(scope != null)
+            if (scope != null)
+            {
                 TempData["scope"] = scope;
+                if (Request.Cookies["user_token"] != null)
+                {
+                    Response.Cookies.Delete("client_id");
+                    Response.Cookies.Delete("responseUrl");
+                    Response.Cookies.Delete("state");
+                    Response.Cookies.Delete("scope");
+                }
+            }
             else
                 TempData["scope"] = "Буде надано доступ до ПІБ, email та ID";
 
