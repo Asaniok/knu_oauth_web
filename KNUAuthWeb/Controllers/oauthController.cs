@@ -213,7 +213,7 @@ namespace KNUAuthWeb.Controllers
             bool check = MySQL.checkClient(connector, cID);
             if (!check) { return RedirectToAction("Home"); }
             TempData["scope"] = scope;
-            TempData["login.text"] = "Авторизувати";
+            //TempData["login.text"] = "Авторизувати";
             var cookieOptions = new CookieOptions
             {
                 Expires = DateTime.Now.AddMinutes(int.Parse(_configuration["cookiesLoginExpTime"]))
