@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KNUAuthMYSQLConnector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+158cfcc18286cfa2d60d15302115350465ffe0c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5298c8d6d09dfe1aef7a79ab8f0eed08725b591b")]
 [assembly: System.Reflection.AssemblyProductAttribute("KNUAuthMYSQLConnector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KNUAuthMYSQLConnector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

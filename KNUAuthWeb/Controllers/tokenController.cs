@@ -49,9 +49,7 @@ namespace KNUOAuthApi.Controllers
             {
 
                 if (cID == 0) { return StatusCode(500, "Error: client_id is Empty!"); }
-                if (cSecret == null) { return StatusCode(500, "Error: client_secret is Empty!"); }
                 if (authCode == null) { return StatusCode(500, "Error: code is Empty!"); }
-                if (reURI == null) { return StatusCode(500, "Error: redirect_uri is Empty!"); }
                 int user_id = MySQL.getUserIdByCode(connector, authCode);
                 string codeScope = MySQL.checkCode(connector, authCode, cID);
                 if (codeScope!=null & codeScope!="IE01" & codeScope!= "TS_EXPIRED")
