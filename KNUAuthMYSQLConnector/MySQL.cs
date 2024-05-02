@@ -453,5 +453,23 @@ namespace KNUAuthMYSQLConnector
             if (count == 0) { return false; }
             return true;
         }
+        public static bool checkClientSecret(Connector c, int id, string secret)
+        {
+            if (c == null) { return false; }
+            string connStr = $"server={c.server};user={c.user};port={c.port};password={c.password};database={c.database}  ;charset=utf8";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT id FROM clients WHERE secret={secret};";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                int bd_id = int.Parse(reader["id"].ToString());
+                conn.CloseAsync();
+                if (bd_id == id) { return true; }
+                else { return false; }
+            }
+            return false;
+        }
     }
 }
