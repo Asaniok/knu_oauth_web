@@ -53,12 +53,10 @@ namespace KNUAuthWeb.Controllers
                             @TempData["admin"] = null;
                     }
                     catch { }
-                    string username = MySQL.getUserNameByToken(connector, token);
-                    @TempData["Username"] = username;
-                    @TempData["viewprofile"] = "viewprofile";
                     dbUser user = MySQL.getUserByToken(connector, token);
                     if (user != null)
                     {
+                        @TempData["Username"] = user.user;
                         @TempData["username"] = user.user;
                         @TempData["id"] = user.id;
                         @TempData["email"] = user.email;
@@ -82,8 +80,7 @@ namespace KNUAuthWeb.Controllers
 
             return View();
         }
-        
-        // POST: /xxx/Register
+
         [HttpPost]
         public ActionResult index(User model)
         {
@@ -342,7 +339,7 @@ namespace KNUAuthWeb.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult delete(dbUser user)
+        public IActionResult delete()
         {
             Connector connector = getConnector();
             if (connector.user == null | connector.port == 0 | connector.user == null | connector.password == null | connector.server == null) { return StatusCode(500, "Wrong server configuration!"); }
@@ -374,23 +371,12 @@ namespace KNUAuthWeb.Controllers
                 return RedirectToAction("index", "home");
             }
             dbUser a = MySQL.getUserByToken(connector, token);
-            if (user.id != 0)
+            if (MySQL.userDeleteProfile(connector, a.id))
             {
-                if (MySQL.userDeleteProfile(connector, user.id))
-                {
-                    Response.Cookies.Delete("user_token");
-                    return RedirectToAction("index", "home");
-                }
-            }
-            else
-            {
-                if (MySQL.userDeleteProfile(connector, a.id))
-                {
-                    Response.Cookies.Delete("user_token");
-                    @TempData["Username"] = null;
-                    @TempData["viewprofile"] = null;
-                    return RedirectToAction("index", "home");
-                }
+                Response.Cookies.Delete("user_token");
+                @TempData["Username"] = null;
+                @TempData["viewprofile"] = null;
+                return RedirectToAction("index", "home");
             }
             return View();
         }
